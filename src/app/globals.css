@@ -1,0 +1,3 @@
+@import "mighty-ui/globals.css";
+
+@source "../../src/**/*.{ts,tsx}";
