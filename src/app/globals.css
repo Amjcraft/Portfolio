@@ -1,3 +1,24 @@
 @import "mighty-ui/globals.css";
 
 @source "../../src/**/*.{ts,tsx}";
+
+/* Portfolio dark theme — navy variant */
+.dark {
+  --background: oklch(0.17 0.05 244);
+  --foreground: oklch(0.62 0.04 258);
+  --card: oklch(0.22 0.05 244);
+  --card-foreground: oklch(0.87 0.03 258);
+  --popover: oklch(0.22 0.05 244);
+  --popover-foreground: oklch(0.87 0.03 258);
+  --primary: oklch(0.93 0.12 178);
+  --primary-foreground: oklch(0.17 0.05 244);
+  --secondary: oklch(0.26 0.04 244);
+  --secondary-foreground: oklch(0.93 0.12 178);
+  --muted: oklch(0.26 0.04 244);
+  --muted-foreground: oklch(0.62 0.04 258);
+  --accent: oklch(0.26 0.04 244);
+  --accent-foreground: oklch(0.93 0.12 178);
+  --border: oklch(0.29 0.04 244);
+  --input: oklch(0.29 0.04 244);
+  --ring: oklch(0.93 0.12 178);
+}
