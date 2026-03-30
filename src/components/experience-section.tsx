@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { Badge } from "mighty-ui";
+import { Badge, Typography } from "mighty-ui";
 
 const EXPERIENCE = [
   {
@@ -11,14 +11,7 @@ const EXPERIENCE = [
     href: "https://ambassadorlabs.com",
     description:
       "Frontend technical lead on a 7-person team building Blackbird, a new SaaS API development platform for developers. Greenfield codebase, close product partnership from day one — I wasn't just executing designs, I was in the room helping figure out what the flows should be, iterating with low-fi mocks and Figma and folding in real usage feedback to shape the final UX. Integrated AI/LLM workflows directly into the product: a chatbot that helped users generate and refine OpenAPI specs, and a codebase analyzer that inferred specs from existing services. Also set up the full frontend testing approach with Playwright and Jest, which made releases noticeably more predictable.",
-    skills: [
-      "React",
-      "TypeScript",
-      "OpenAPI",
-      "AI/LLM",
-      "Playwright",
-      "Figma",
-    ],
+    skills: ["React", "TypeScript", "OpenAPI", "AI/LLM", "Playwright", "Figma"],
   },
   {
     dates: "Jan 2020 — Jul 2023",
@@ -84,17 +77,18 @@ const EXPERIENCE = [
 export function ExperienceSection() {
   return (
     <section
-      id="experience"
-      className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
+      id='experience'
+      className='mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24'
     >
+      <Typography variant={"h2"}>Experience</Typography>
       {/* Mobile section heading */}
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only">
-        <h2 className="text-xs font-bold uppercase tracking-widest text-card-foreground">
+      <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only'>
+        <h2 className='text-xs font-bold uppercase tracking-widest text-card-foreground'>
           Experience
         </h2>
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className='flex flex-col gap-1'>
         {EXPERIENCE.map((job, i) => {
           const Wrapper = job.href ? "a" : "div";
           const wrapperProps = job.href
@@ -105,26 +99,26 @@ export function ExperienceSection() {
             <Wrapper
               key={i}
               {...(wrapperProps as object)}
-              className="group relative grid grid-cols-8 gap-4 rounded-md px-4 py-4 transition-all hover:bg-card hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.08)] hover:drop-shadow-lg"
+              className='group relative grid grid-cols-8 gap-4 rounded-md px-4 py-4 transition-all hover:bg-card hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.08)] hover:drop-shadow-lg'
             >
-              <div className="col-span-2 pt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              <div className='col-span-2 pt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground'>
                 {job.dates}
               </div>
-              <div className="col-span-6">
-                <h3 className="flex items-center gap-1 text-sm font-medium leading-snug text-card-foreground transition-colors group-hover:text-primary">
+              <div className='col-span-6'>
+                <h3 className='flex items-center gap-1 text-sm font-medium leading-snug text-card-foreground transition-colors group-hover:text-primary'>
                   {job.title} · {job.company}
                   {job.href && (
-                    <ArrowUpRight className="size-3.5 shrink-0 translate-y-px opacity-0 transition-all group-hover:opacity-100" />
+                    <ArrowUpRight className='size-3.5 shrink-0 translate-y-px opacity-0 transition-all group-hover:opacity-100' />
                   )}
                 </h3>
-                <p className="mt-2 text-sm leading-normal">{job.description}</p>
+                <p className='mt-2 text-sm leading-normal'>{job.description}</p>
                 <ul
-                  className="mt-4 flex flex-wrap gap-2"
-                  aria-label="Technologies used"
+                  className='mt-4 flex flex-wrap gap-2'
+                  aria-label='Technologies used'
                 >
                   {job.skills.map((skill) => (
                     <li key={skill}>
-                      <Badge variant="secondary">{skill}</Badge>
+                      <Badge variant='default'>{skill}</Badge>
                     </li>
                   ))}
                 </ul>
@@ -134,13 +128,13 @@ export function ExperienceSection() {
         })}
       </div>
 
-      <div className="mt-10 px-4">
+      <div className='mt-10 px-4'>
         <a
-          href="#"
-          className="group inline-flex items-center gap-1.5 text-sm font-semibold text-card-foreground transition-colors hover:text-primary"
+          href='#'
+          className='group inline-flex items-center gap-1.5 text-sm font-semibold text-card-foreground transition-colors hover:text-primary'
         >
           View Full Résumé
-          <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <ArrowUpRight className='size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
         </a>
       </div>
     </section>

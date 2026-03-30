@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { Badge } from "mighty-ui";
+import { Badge, Typography } from "mighty-ui";
 
 const PROJECTS = [
   {
@@ -39,47 +39,48 @@ const PROJECTS = [
 export function ProjectsSection() {
   return (
     <section
-      id="projects"
-      className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
+      id='projects'
+      className='mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24'
     >
+      <Typography variant={"h2"}>Projects</Typography>
       {/* Mobile section heading */}
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only">
-        <h2 className="text-xs font-bold uppercase tracking-widest text-card-foreground">
+      <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only'>
+        <h2 className='text-xs font-bold uppercase tracking-widest text-card-foreground'>
           Projects
         </h2>
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className='flex flex-col gap-1'>
         {PROJECTS.map((project, i) => (
           <div
             key={i}
-            className="group relative rounded-md px-4 py-4 transition-all hover:bg-card hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.08)] hover:drop-shadow-lg"
+            className='group relative rounded-md px-4 py-4 transition-all hover:bg-card hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.08)] hover:drop-shadow-lg'
           >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-sm font-medium leading-snug text-card-foreground transition-colors group-hover:text-primary">
+            <div className='flex items-start justify-between gap-4'>
+              <h3 className='text-sm font-medium leading-snug text-card-foreground transition-colors group-hover:text-primary'>
                 {project.href ? (
                   <a
                     href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1"
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-1'
                   >
                     {project.title}
-                    <ArrowUpRight className="size-3.5 shrink-0 translate-y-px opacity-0 transition-all group-hover:opacity-100" />
+                    <ArrowUpRight className='size-3.5 shrink-0 translate-y-px opacity-0 transition-all group-hover:opacity-100' />
                   </a>
                 ) : (
                   project.title
                 )}
               </h3>
             </div>
-            <p className="mt-2 text-sm leading-normal">{project.description}</p>
+            <p className='mt-2 text-sm leading-normal'>{project.description}</p>
             <ul
-              className="mt-4 flex flex-wrap gap-2"
-              aria-label="Technologies used"
+              className='mt-4 flex flex-wrap gap-2'
+              aria-label='Technologies used'
             >
               {project.tech.map((t) => (
                 <li key={t}>
-                  <Badge variant="secondary">{t}</Badge>
+                  <Badge variant='secondary'>{t}</Badge>
                 </li>
               ))}
             </ul>

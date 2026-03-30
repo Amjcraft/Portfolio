@@ -2,23 +2,23 @@
 
 @source "../../src/**/*.{ts,tsx}";
 
-/* Portfolio dark theme — navy variant */
-.dark {
-  --background: oklch(0.17 0.05 244);
-  --foreground: oklch(0.62 0.04 258);
-  --card: oklch(0.22 0.05 244);
-  --card-foreground: oklch(0.87 0.03 258);
-  --popover: oklch(0.22 0.05 244);
-  --popover-foreground: oklch(0.87 0.03 258);
-  --primary: oklch(0.93 0.12 178);
-  --primary-foreground: oklch(0.17 0.05 244);
-  --secondary: oklch(0.26 0.04 244);
-  --secondary-foreground: oklch(0.93 0.12 178);
-  --muted: oklch(0.26 0.04 244);
-  --muted-foreground: oklch(0.62 0.04 258);
-  --accent: oklch(0.26 0.04 244);
-  --accent-foreground: oklch(0.93 0.12 178);
-  --border: oklch(0.29 0.04 244);
-  --input: oklch(0.29 0.04 244);
-  --ring: oklch(0.93 0.12 178);
+/* Portfolio light theme */
+:root {
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.22 0.015 258);
+  --card: oklch(0.97 0.005 244);
+  --card-foreground: oklch(0.13 0.02 258);
+  --popover: oklch(0.97 0.005 244);
+  --popover-foreground: oklch(0.13 0.02 258);
+  --primary: oklch(0.5 0.14 178);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.92 0.03 178);
+  --secondary-foreground: oklch(0.38 0.1 178);
+  --muted: oklch(0.95 0.005 244);
+  --muted-foreground: oklch(0.5 0.02 258);
+  --accent: oklch(0.95 0.005 244);
+  --accent-foreground: oklch(0.22 0.015 258);
+  --border: oklch(0.88 0.01 244);
+  --input: oklch(0.88 0.01 244);
+  --ring: oklch(0.5 0.14 178);
 }

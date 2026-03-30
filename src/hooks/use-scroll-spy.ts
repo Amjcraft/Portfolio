@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 
-export function useScrollSpy(ids: string[]) {
+export function useScrollSpy(ids: string[], rootId?: string) {
   const [activeId, setActiveId] = useState<string>(ids[0] ?? "");
 
   useEffect(() => {
+    const root = rootId ? document.getElementById(rootId) : null;
     const observers: IntersectionObserver[] = [];
 
     ids.forEach((id) => {
@@ -18,7 +19,7 @@ export function useScrollSpy(ids: string[]) {
             setActiveId(id);
           }
         },
-        { rootMargin: "-30% 0px -65% 0px" },
+        { root, rootMargin: "-30% 0px -65% 0px" },
       );
 
       observer.observe(el);
@@ -26,7 +27,7 @@ export function useScrollSpy(ids: string[]) {
     });
 
     return () => observers.forEach((obs) => obs.disconnect());
-  }, [ids]);
+  }, [ids, rootId]);
 
   return activeId;
 }
