@@ -22,7 +22,7 @@ const SOCIAL_LINKS = [
 
 export function Sidebar() {
   return (
-    <div className='flex h-full flex-col justify-between'>
+    <div className='flex h-full flex-col justify-between text-center lg:text-left'>
       <div>
         {/* Identity */}
         <div>
@@ -32,7 +32,7 @@ export function Sidebar() {
           <h2 className='mt-3 text-xl font-medium tracking-tight text-card-foreground'>
             Senior Frontend Engineer
           </h2>
-          <p className='mt-4 max-w-xs text-sm leading-normal'>
+          <p className='mt-4 max-w-md lg:max-w-xs m-auto lg:m-0 text-sm leading-normal text-center lg:text-left'>
             I&apos;ve spent the last decade building tools for developers. Now
             those tools need to work for AI too.
           </p>
@@ -40,7 +40,7 @@ export function Sidebar() {
       </div>
 
       {/* Social links */}
-      <div className='flex items-center gap-5 mt-8 lg:mt-0'>
+      <div className='flex items-center justify-center gap-5 mt-8 lg:mt-0 lg:justify-start'>
         {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
           <a
             key={label}

@@ -2,6 +2,14 @@
 
 @source "../../src/**/*.{ts,tsx}";
 
+@media (max-width: 1023px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
 /* Portfolio light theme */
 :root {
   --background: oklch(0.99 0 0);

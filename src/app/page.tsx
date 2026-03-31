@@ -6,7 +6,7 @@ import { ProjectsSection } from "@/components/projects-section";
 
 export default function Home() {
   return (
-    <div className='mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 '>
+    <div className='mx-auto min-h-screen max-w-screen-2xl px-6 pt-21 pb-8 md:px-12 md:py-20 lg:px-24 lg:py-0 overflow-y-scroll'>
       <div className='lg:flex lg:justify-between lg:gap-4'>
         {/* Left: sticky sidebar */}
         <header className='lg:top-0 lg:flex lg:h-screen lg:w-[35%] lg:flex-col lg:justify-between lg:py-24'>
@@ -18,7 +18,7 @@ export default function Home() {
           <SectionNav />
           <div
             id='content-wrapper'
-            className='content-wrapper p-2 relative overflow-y-auto my-6 h-full'
+            className='content-wrapper p-2 my-6 pr-5 lg:relative lg:overflow-y-auto lg:h-full'
           >
             <AboutSection />
             <ExperienceSection />

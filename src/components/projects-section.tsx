@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { Badge, Typography } from "mighty-ui";
+import { SectionHeading } from "@/components/section-heading";
 
 const PROJECTS = [
   {
@@ -39,13 +40,7 @@ const PROJECTS = [
 export function ProjectsSection() {
   return (
     <section id='projects' className=' scroll-mt-16 lg:scroll-mt-24'>
-      <Typography variant={"h2"}>Projects</Typography>
-      {/* Mobile section heading */}
-      <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only'>
-        <h2 className='text-xs font-bold uppercase tracking-widest text-card-foreground'>
-          Projects
-        </h2>
-      </div>
+      <SectionHeading>Projects</SectionHeading>
 
       <div className='flex flex-col gap-1'>
         {PROJECTS.map((project, i) => (
@@ -77,7 +72,7 @@ export function ProjectsSection() {
             >
               {project.tech.map((t) => (
                 <li key={t}>
-                  <Badge variant='secondary'>{t}</Badge>
+                  <Badge variant='default'>{t}</Badge>
                 </li>
               ))}
             </ul>

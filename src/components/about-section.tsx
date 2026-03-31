@@ -1,12 +1,9 @@
+import { SectionHeading } from "@/components/section-heading";
+
 export function AboutSection() {
   return (
     <section id='about' className='mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24'>
-      {/* Mobile section heading — sticky while in viewport */}
-      <div className='top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only'>
-        <h2 className='text-xs font-bold uppercase tracking-widest text-card-foreground'>
-          About
-        </h2>
-      </div>
+      <SectionHeading>About</SectionHeading>
 
       <div className='space-y-4 text-sm leading-relaxed'>
         <p>

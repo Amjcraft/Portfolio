@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { Badge, Typography } from "mighty-ui";
+import { SectionHeading } from "@/components/section-heading";
 
 const EXPERIENCE = [
   {
@@ -80,13 +81,7 @@ export function ExperienceSection() {
       id='experience'
       className='mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24'
     >
-      <Typography variant={"h2"}>Experience</Typography>
-      {/* Mobile section heading */}
-      <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only'>
-        <h2 className='text-xs font-bold uppercase tracking-widest text-card-foreground'>
-          Experience
-        </h2>
-      </div>
+      <SectionHeading>Experience</SectionHeading>
 
       <div className='flex flex-col gap-1'>
         {EXPERIENCE.map((job, i) => {
@@ -118,7 +113,7 @@ export function ExperienceSection() {
                 >
                   {job.skills.map((skill) => (
                     <li key={skill}>
-                      <Badge variant='secondary'>{skill}</Badge>
+                      <Badge variant='default'>{skill}</Badge>
                     </li>
                   ))}
                 </ul>
