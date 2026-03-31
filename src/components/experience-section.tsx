@@ -118,7 +118,7 @@ export function ExperienceSection() {
                 >
                   {job.skills.map((skill) => (
                     <li key={skill}>
-                      <Badge variant='default'>{skill}</Badge>
+                      <Badge variant='secondary'>{skill}</Badge>
                     </li>
                   ))}
                 </ul>
