@@ -1,10 +1,18 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { Badge, Typography } from "mighty-ui";
+import { Badge } from "mighty-ui";
 import { SectionHeading } from "@/components/section-heading";
 
 const PROJECTS = [
+  {
+    title: "Might UI",
+    href: "https://github.com/amjcraft/mighty-ui",
+    github: null,
+    description:
+      "A personal React component library built to scratch two itches at once. Having a consistent design system across my own projects, and experimenting with LLM-assisted development workflows. The components themselves are straightforward, the interesting part is using it as a sandbox for exploring how AI agents fit into the design-to-code process.",
+    tech: ["React", "TypeScript", "Radix UI", "Tailwind CSS", "Storybook"],
+  },
   {
     title: "Blackbird",
     href: "https://ambassadorlabs.com",
@@ -26,14 +34,6 @@ const PROJECTS = [
       "Design Tokens",
       "Accessibility",
     ],
-  },
-  {
-    title: "API Spec AI Integration",
-    href: null,
-    github: null,
-    description:
-      "Two AI-driven features shipped at Ambassador Labs: a chatbot interface for generating and refining OpenAPI specs, and a codebase analyzer that inferred specs from existing service code. At the time it felt like a feature. In retrospect, a preview of where the whole space is going.",
-    tech: ["React", "TypeScript", "OpenAPI", "LLM Integration", "Developer UX"],
   },
 ];
 

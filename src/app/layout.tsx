@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Aaron | Frontend Engineer",
-  description: "Personal portfolio — frontend engineer building accessible, inclusive products for the web.",
+  description:
+    "Frontend engineer building clean, intuitive interfaces for complex tools.",
 };
 
 export default function RootLayout({
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang='en' className='scroll-smooth'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background font-sans antialiased selection:bg-primary/20 selection:text-primary`}
       >

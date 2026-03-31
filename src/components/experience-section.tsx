@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { Badge, Typography } from "mighty-ui";
+import { Badge } from "mighty-ui";
 import { SectionHeading } from "@/components/section-heading";
 
 const EXPERIENCE = [
@@ -125,10 +125,10 @@ export function ExperienceSection() {
 
       <div className='mt-10 px-4'>
         <a
-          href='#'
+          href='/aaron-jones-resume.pdf'
           className='group inline-flex items-center gap-1.5 text-sm font-semibold text-card-foreground transition-colors hover:text-primary'
         >
-          View Full Résumé
+          View Full Resume
           <ArrowUpRight className='size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
         </a>
       </div>
