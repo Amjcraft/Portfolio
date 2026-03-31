@@ -38,10 +38,7 @@ const PROJECTS = [
 
 export function ProjectsSection() {
   return (
-    <section
-      id='projects'
-      className='mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24'
-    >
+    <section id='projects' className=' scroll-mt-16 lg:scroll-mt-24'>
       <Typography variant={"h2"}>Projects</Typography>
       {/* Mobile section heading */}
       <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only'>

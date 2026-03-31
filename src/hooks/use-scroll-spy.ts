@@ -26,7 +26,7 @@ export function useScrollSpy(ids: string[], rootId?: string) {
       observers.push(observer);
     });
 
-    return () => observers.forEach((obs) => obs.disconnect());
+    return () => observers.forEach((obs) => { obs.disconnect(); });
   }, [ids, rootId]);
 
   return activeId;

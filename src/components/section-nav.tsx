@@ -1,6 +1,6 @@
 "use client";
 
-import { cn, Button } from "mighty-ui";
+import { Button } from "mighty-ui";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
 
 const NAV_ITEMS = [
@@ -13,7 +13,11 @@ function scrollToSection(id: string) {
   const container = document.getElementById("content-wrapper");
   const target = document.getElementById(id);
   if (!container || !target) return;
-  container.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+  const top =
+    target.getBoundingClientRect().top -
+    container.getBoundingClientRect().top +
+    container.scrollTop;
+  container.scrollTo({ top, behavior: "smooth" });
 }
 
 export function SectionNav() {
