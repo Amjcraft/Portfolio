@@ -2,12 +2,43 @@
 
 @source "../../src/**/*.{ts,tsx}";
 
+html,
+body {
+  overflow-y: hidden;
+}
+
 @media (max-width: 1023px) {
   html,
   body {
     height: auto;
     overflow-y: auto;
   }
+}
+
+/* .content-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.content-wrapper::-webkit-scrollbar {
+  width: 4px;
+  margin-top: 25px;
+  border-left: 1px solid var(--border);
+}
+
+.content-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+  border-left: 1px solid var(--border);
+}
+
+.content-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+
+  border-radius: 9999px;
+} */
+
+.content-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted-foreground);
 }
 
 /* Portfolio light theme */

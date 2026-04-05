@@ -47,7 +47,7 @@ export function SectionNav() {
     <nav
       aria-label='On-page sections'
       className={cn(
-        "fixed top-0 z-10 flex justify-center items-center gap-1 border-b bg-background/80 backdrop-blur py-2 transition-shadow w-full",
+        "fixed top-0 left-0 z-10 flex justify-center items-center gap-1 border-b bg-background/80 backdrop-blur py-2 transition-shadow w-full",
         "lg:static lg:w-auto lg:justify-start lg:border-none lg:bg-transparent lg:backdrop-blur-none lg:py-0 lg:shadow-none",
         scrolled && "shadow-md lg:shadow-none",
       )}

@@ -9,14 +9,9 @@ const SOCIAL_LINKS = [
     icon: GitHubIcon,
   },
   {
-    href: "https://linkedin.com",
+    href: "https://linkedin.com/in/amjcraft",
     label: "LinkedIn",
     icon: LinkedInIcon,
-  },
-  {
-    href: "https://twitter.com",
-    label: "Twitter / X",
-    icon: TwitterXIcon,
   },
 ];
 
