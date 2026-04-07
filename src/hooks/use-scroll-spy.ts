@@ -10,7 +10,6 @@ export function useScrollSpy(ids: string[], rootId?: string) {
       const containerEl = rootId ? document.getElementById(rootId) : null;
 
       // If scrolled to the bottom, the last section is always active.
-      // This handles cases where the last section is too short to reach the threshold.
       const atBottom = containerEl
         ? containerEl.scrollTop + containerEl.clientHeight >= containerEl.scrollHeight - 8
         : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8;
@@ -21,7 +20,6 @@ export function useScrollSpy(ids: string[], rootId?: string) {
       }
 
       // Threshold: 20% down from the top of the scroll container (or viewport).
-      // The active section is the last one whose top has crossed this line.
       const threshold = containerEl
         ? containerEl.getBoundingClientRect().top + containerEl.clientHeight * 0.2
         : window.innerHeight * 0.2;

@@ -30,7 +30,9 @@ function scrollToSection(id: string) {
 }
 
 export function SectionNav() {
-  const activeSection = useScrollSpy(SECTION_IDS, "content-wrapper");
+  // Desktop scrolls inside content-wrapper; mobile scrolls the window
+  const activeSectionDesktop = useScrollSpy(SECTION_IDS, "content-wrapper");
+  const activeSectionMobile = useScrollSpy(SECTION_IDS);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -54,7 +56,7 @@ export function SectionNav() {
         {NAV_ITEMS.map(({ id, label }) => (
           <Button
             key={id}
-            variant={activeSection === id ? "secondary" : "ghost"}
+            variant={activeSectionMobile === id ? "secondary" : "ghost"}
             size="sm"
             onClick={() => scrollToSection(id)}
           >
@@ -69,7 +71,7 @@ export function SectionNav() {
         className="hidden lg:flex lg:flex-col lg:gap-5"
       >
         {NAV_ITEMS.map(({ id, label }) => {
-          const isActive = activeSection === id;
+          const isActive = activeSectionDesktop === id;
           return (
             <button
               key={id}

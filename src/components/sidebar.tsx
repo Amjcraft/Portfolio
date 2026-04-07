@@ -31,7 +31,7 @@ export function Sidebar() {
           I&apos;ve spent the last decade building tools for developers. Now
           those tools need to work for AI too.
         </p>
-        <p className='mt-8 max-w-md lg:max-w-xs m-auto lg:m-0 text-sm italic text-muted-foreground text-center lg:text-left'>
+        <p className='mt-8 max-w-md lg:max-w-xs m-auto lg:mx-0 text-sm italic text-muted-foreground text-center lg:text-left'>
           &ldquo;Let&apos;s go exploring.&rdquo;
         </p>
         <div className='mt-32'>
