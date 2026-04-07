@@ -6,31 +6,43 @@ export function useScrollSpy(ids: string[], rootId?: string) {
   const [activeId, setActiveId] = useState<string>(ids[0] ?? "");
 
   useEffect(() => {
-    const rootEl = rootId ? document.getElementById(rootId) : null;
-    // Only use the container as root if it actually has its own scroll (desktop).
-    // On mobile the container flows naturally and the window scrolls instead.
-    const root =
-      rootEl && rootEl.scrollHeight > rootEl.clientHeight ? rootEl : null;
-    const observers: IntersectionObserver[] = [];
+    function update() {
+      const containerEl = rootId ? document.getElementById(rootId) : null;
 
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
+      // If scrolled to the bottom, the last section is always active.
+      // This handles cases where the last section is too short to reach the threshold.
+      const atBottom = containerEl
+        ? containerEl.scrollTop + containerEl.clientHeight >= containerEl.scrollHeight - 8
+        : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8;
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveId(id);
-          }
-        },
-        { root, rootMargin: "-30% 0px -65% 0px" },
-      );
+      if (atBottom) {
+        setActiveId(ids[ids.length - 1] ?? ids[0]);
+        return;
+      }
 
-      observer.observe(el);
-      observers.push(observer);
-    });
+      // Threshold: 20% down from the top of the scroll container (or viewport).
+      // The active section is the last one whose top has crossed this line.
+      const threshold = containerEl
+        ? containerEl.getBoundingClientRect().top + containerEl.clientHeight * 0.2
+        : window.innerHeight * 0.2;
 
-    return () => observers.forEach((obs) => { obs.disconnect(); });
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= threshold) {
+          current = id;
+        }
+      }
+      setActiveId(current ?? ids[0]);
+    }
+
+    update();
+
+    const containerEl = rootId ? document.getElementById(rootId) : null;
+    const scrollTarget: EventTarget = containerEl ?? window;
+    scrollTarget.addEventListener("scroll", update, { passive: true });
+    return () => scrollTarget.removeEventListener("scroll", update);
   }, [ids, rootId]);
 
   return activeId;

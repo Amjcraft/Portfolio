@@ -1,4 +1,16 @@
+"use client";
+
+import { Badge } from "mighty-ui";
 import { SectionHeading } from "@/components/section-heading";
+
+const CORE_SKILLS = [
+  "UX Engineering",
+  "Design Systems",
+  "Developer Tooling",
+  "AI/LLM",
+  "Product Engineering",
+  "Frontend Architecture",
+];
 
 export function AboutSection() {
   return (
@@ -19,6 +31,13 @@ export function AboutSection() {
           figure out, and that's where I want to be working.
         </p>
       </div>
+      <ul className='mt-6 flex flex-wrap gap-2' aria-label='Core skills'>
+        {CORE_SKILLS.map((skill) => (
+          <li key={skill}>
+            <Badge variant='outline'>{skill}</Badge>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

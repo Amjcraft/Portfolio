@@ -1,5 +1,4 @@
 import { Sidebar } from "@/components/sidebar";
-import { SectionNav } from "@/components/section-nav";
 import { AboutSection } from "@/components/about-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { ProjectsSection } from "@/components/projects-section";
@@ -15,7 +14,6 @@ export default function Home() {
 
         {/* Right: scrollable content */}
         <main className='pt-12 lg:w-[55%] lg:py-24 lg:h-screen relative'>
-          <SectionNav />
           <div
             id='content-wrapper'
             className='content-wrapper p-2 my-6 pr-5 lg:relative lg:overflow-y-auto lg:h-full'
