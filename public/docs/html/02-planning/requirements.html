@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Requirements — Suana</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html">🔥 Suana</a>
+  <div class="brand-sub">Outdoor electric sauna — build project</div>
+  <div class="nav-section">Home</div><ul><li><a href="../README.html">Suana — Project Home</a></li></ul><div class="nav-section">Overview</div><ul><li><a href="../00-overview/glossary.html">Glossary</a></li><li><a href="../00-overview/project-charter.html">Project Charter</a></li></ul><div class="nav-section">Research</div><ul><li><a href="../01-research/README.html">Research</a></li><li><a href="../01-research/aspen-pricing.html">Aspen Pricing (PNW)</a></li><li><a href="../01-research/pdf-digests.html">PDF Research Digests</a></li><li><a href="../01-research/hemlock-pricing.html">Western Hemlock Pricing (PNW)</a></li><li><a href="../01-research/cedar-pricing.html">Western Red Cedar Pricing (PNW)</a></li></ul><div class="nav-section">Planning</div><ul><li><a href="../02-planning/budget.html">Budget</a></li><li><a href="../02-planning/cost-options.html">Cost Options (Value Engineering)</a></li><li><a href="../02-planning/materials-and-tools.html">Materials &amp; Tools</a></li><li><a href="../02-planning/permits-and-code.html">Permits &amp; Code</a></li><li><a href="../02-planning/requirements.html" class="active">Requirements</a></li><li><a href="../02-planning/site-assessment.html">Site Assessment</a></li></ul><div class="nav-section">Design</div><ul><li><a href="../03-design/README.html">Design</a></li><li><a href="../03-design/benches-and-interior.html">Benches &amp; Interior</a></li><li><a href="../03-design/construction-drawings.html">Construction Drawings</a></li><li><a href="../03-design/dimensions-and-layout.html">Dimensions &amp; Layout</a></li><li><a href="../03-design/electrical-and-heater.html">Electrical &amp; Heater</a></li><li><a href="../03-design/foundation.html">Foundation &amp; Base</a></li><li><a href="../03-design/framing.html">Framing</a></li><li><a href="../03-design/insulation-and-vapor-barrier.html">Insulation &amp; Vapor Barrier</a></li><li><a href="../03-design/interior-cladding.html">Interior Cladding</a></li><li><a href="../03-design/ventilation.html">Ventilation</a></li></ul><div class="nav-section">Build Guide</div><ul><li><a href="../04-build-guide/README.html">Build Guide</a></li></ul><div class="nav-section">Reference</div><ul><li><a href="../05-reference/maintenance.html">Maintenance</a></li><li><a href="../05-reference/standards-and-codes.html">Standards &amp; Codes</a></li><li><a href="../05-reference/suppliers.html">Suppliers</a></li></ul>
+</aside>
+<main class="content">
+  <header class="doc-header">
+    <h1>Requirements</h1>
+    <div class="doc-meta">
+      <span class="badge badge-section">Planning</span>
+      <span class="badge badge-status status-draft">draft</span>
+      <span>Updated 2026-07-24</span>
+    </div>
+  </header>
+  <nav class="toc"><div class="toc-title">On this page</div><ul><li class="lvl-2"><a href="#overview">Overview</a></li><li class="lvl-2"><a href="#functional-requirements">Functional requirements</a></li><li class="lvl-2"><a href="#site-amp-structural-requirements">Site &amp;amp; structural requirements</a></li><li class="lvl-2"><a href="#electrical-requirements">Electrical requirements</a></li><li class="lvl-2"><a href="#non-functional-quality">Non-functional / quality</a></li><li class="lvl-2"><a href="#constraints-to-confirm">Constraints to confirm</a></li></ul></nav>
+  <article><h2 id="overview">Overview <a class="anchor" href="#overview" aria-hidden="true">#</a></h2>
+<p>The concrete requirements the finished sauna must meet. These translate the
+charter’s goals into checkable criteria that the design must satisfy.</p>
+<h2 id="functional-requirements">Functional requirements <a class="anchor" href="#functional-requirements" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Comfortably seats <strong>N</strong> people (TBD — drives size &amp; heater kW).</li>
+<li>[ ] Reaches and holds a proper bathing temperature (target range TBD).</li>
+<li>[ ] Supports löyly (water on stones) — heater and ventilation must allow it.</li>
+<li>[ ] Usable in the local climate year-round (or defined season).</li>
+</ul>
+<h2 id="site-amp-structural-requirements">Site &amp; structural requirements <a class="anchor" href="#site-amp-structural-requirements" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Freestanding outdoor structure with a durable, weather-resistant envelope.</li>
+<li>[ ] Foundation appropriate to soil, drainage, and frost/snow load.</li>
+<li>[ ] Safe clearances around the heater per manufacturer + code.</li>
+</ul>
+<h2 id="electrical-requirements">Electrical requirements <a class="anchor" href="#electrical-requirements" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Dedicated circuit sized to the chosen heater.</li>
+<li>[ ] Code-compliant (GFCI/disconnect as required locally).</li>
+<li>[ ] Wiring rated for the sauna’s heat/humidity where applicable.</li>
+</ul>
+<h2 id="non-functional-quality">Non-functional / quality <a class="anchor" href="#non-functional-quality" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Buildable by a DIYer with common tools.</li>
+<li>[ ] Maintainable (replaceable stones, cleanable interior, ventable moisture).</li>
+<li>[ ] Within budget (see <code>budget.md</code>).</li>
+</ul>
+<h2 id="constraints-to-confirm">Constraints to confirm <a class="anchor" href="#constraints-to-confirm" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Occupancy target</li>
+<li>[ ] Available electrical service (amps/voltage)</li>
+<li>[ ] Budget ceiling</li>
+<li>[ ] Local permit/code requirements (see <code>permits-and-code.md</code>)</li>
+</ul>
+</article>
+  <footer class="doc-footer">
+    Suana build docs · source: <code>docs/src/02-planning/requirements.md</code>
+  </footer>
+</main>
+</div>
+</body>
+</html>
