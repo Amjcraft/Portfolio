@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 760" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="860" height="760" fill="#fbf7f0"/>
+
+  <!-- Main title -->
+  <text x="430" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#5e3d1c">Floor Frame &amp; Assembly</text>
+
+  <!-- ===== PLAN VIEW ===== -->
+  <text x="430" y="58" text-anchor="middle" font-size="13" font-weight="600" fill="#5e3d1c">Plan View (top-down) · 9.5 ft × 8 ft · 9 joists @ ≈14¼″ OC · scale ≈ 1 ft : 50 px</text>
+
+  <!-- Slab fill (first 6 ft of joist run) -->
+  <rect x="193" y="70" width="475" height="300" fill="#b9b9b9" opacity="0.22"/>
+  <!-- Pillar zone fill (far 2 ft) -->
+  <rect x="193" y="370" width="475" height="100" fill="#cbb79a" opacity="0.30"/>
+
+  <!-- Floor boundary -->
+  <rect x="193" y="70" width="475" height="400" fill="none" stroke="#4c463f" stroke-width="1.5"/>
+
+  <!-- Slab edge line at 6 ft (y=70+300=370) -->
+  <line x1="178" y1="370" x2="684" y2="370" stroke="#5a5a5a" stroke-width="1.5" stroke-dasharray="8 4"/>
+
+  <!--
+    9 joists running the 8 ft direction (vertical in plan, slab-end top → pillar-end bottom).
+    Spaced evenly across 9.5 ft width (475 px):
+      8 spaces × 59.4 px ≈ 14.25″ OC
+    Centers: 193, 252, 312, 371, 431, 490, 549, 609, 668
+    Each joist: 6 px wide, 400 px tall
+    Left edge = center − 3
+  -->
+  <rect x="190" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="249" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="309" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="368" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="428" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="487" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="546" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="606" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+  <rect x="665" y="70" width="6" height="400" fill="#c89b6a" stroke="#8a5a2b" stroke-width="0.75"/>
+
+  <!-- Pillar bodies at far end (circles, outer two joists only) -->
+  <circle cx="193" cy="482" r="14" fill="#b9b9b9" stroke="#5a5a5a" stroke-width="1.5"/>
+  <text x="193" y="486" text-anchor="middle" font-size="8" font-weight="700" fill="#333">PIL</text>
+  <circle cx="668" cy="482" r="14" fill="#b9b9b9" stroke="#5a5a5a" stroke-width="1.5"/>
+  <text x="668" y="486" text-anchor="middle" font-size="8" font-weight="700" fill="#333">PIL</text>
+
+  <!-- Slit indicator: outer joist ends entering the pillar slit -->
+  <rect x="190" y="462" width="6" height="8" fill="#5e3d1c"/>
+  <rect x="665" y="462" width="6" height="8" fill="#5e3d1c"/>
+
+  <!-- Zone labels -->
+  <text x="430" y="225" text-anchor="middle" font-size="11" fill="#666" font-style="italic">concrete slab (6 ft)</text>
+  <text x="430" y="430" text-anchor="middle" font-size="11" fill="#7a5a20" font-style="italic">pillar zone (2 ft)</text>
+  <text x="684" y="367" font-size="9" fill="#5a5a5a">← slab edge</text>
+
+  <!-- Joist direction arrow and label -->
+  <line x1="430" y1="95" x2="430" y2="445" stroke="#8a5a2b" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+  <text x="450" y="270" font-size="9" fill="#5e3d1c" transform="rotate(90 450 270)">joist run (8 ft)</text>
+
+  <!-- Pillar slit labels -->
+  <line x1="193" y1="466" x2="175" y2="450" stroke="#4c463f" stroke-width="1"/>
+  <text x="172" y="447" text-anchor="end" font-size="9" fill="#5e3d1c">slots into 2″ slit</text>
+  <line x1="668" y1="466" x2="686" y2="450" stroke="#4c463f" stroke-width="1"/>
+  <text x="689" y="447" font-size="9" fill="#5e3d1c">slots into 2″ slit</text>
+
+  <!-- Dimension: 9.5 ft width -->
+  <line x1="193" y1="510" x2="668" y2="510" stroke="#4c463f" stroke-width="1"/>
+  <line x1="193" y1="505" x2="193" y2="515" stroke="#4c463f"/>
+  <line x1="668" y1="505" x2="668" y2="515" stroke="#4c463f"/>
+  <text x="430" y="526" text-anchor="middle" font-size="11" font-weight="600" fill="#22201d">9 ft 6 in (114″) — 9 joists @ ≈14¼″ OC</text>
+
+  <!-- Dimension: 8 ft depth -->
+  <line x1="155" y1="70" x2="155" y2="470" stroke="#4c463f" stroke-width="1"/>
+  <line x1="150" y1="70"  x2="160" y2="70"  stroke="#4c463f"/>
+  <line x1="150" y1="470" x2="160" y2="470" stroke="#4c463f"/>
+  <text x="147" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#22201d" transform="rotate(-90 147 274)">8 ft (96″)</text>
+
+  <!-- Dimension: slab 6 ft -->
+  <line x1="130" y1="70"  x2="130" y2="370" stroke="#7d7d7d" stroke-width="1"/>
+  <line x1="125" y1="70"  x2="135" y2="70"  stroke="#7d7d7d"/>
+  <line x1="125" y1="370" x2="135" y2="370" stroke="#7d7d7d"/>
+  <text x="122" y="224" text-anchor="middle" font-size="10" fill="#7d7d7d" transform="rotate(-90 122 224)">slab 6 ft</text>
+
+  <!-- Dimension: pillar zone 2 ft -->
+  <line x1="130" y1="370" x2="130" y2="470" stroke="#7a5a20" stroke-width="1"/>
+  <line x1="125" y1="370" x2="135" y2="370" stroke="#7a5a20"/>
+  <line x1="125" y1="470" x2="135" y2="470" stroke="#7a5a20"/>
+  <text x="122" y="424" text-anchor="middle" font-size="10" fill="#7a5a20" transform="rotate(-90 122 424)">2 ft</text>
+
+  <!-- ===== DIVIDER ===== -->
+  <line x1="60" y1="545" x2="800" y2="545" stroke="#d4c4a8" stroke-width="1.5"/>
+
+  <!-- ===== CROSS-SECTION ASSEMBLY DETAIL ===== -->
+  <text x="430" y="567" text-anchor="middle" font-size="13" font-weight="600" fill="#5e3d1c">Assembly Cross-Section — Floor Layers</text>
+  <text x="430" y="581" text-anchor="middle" font-size="10" fill="#4c463f">vertical scale exaggerated for clarity · bottom-to-top build order</text>
+
+  <!--
+    Cross-section layout (3 joists, 2 bays):
+      Joist:  14 px wide  (= 1.5 in)
+      Bay:   140 px wide  (= 14.25 in at ≈14¼ in OC)
+      Total: 3×14 + 2×140 = 322 px  →  centered at x=430  →  start x=269
+
+    y coordinates (joist bottom=715, joist top=655, height=60 px):
+      HW cloth:      y=715 (line at joist-bottom face)
+      Foam board:    y=703..715  (12 px ≈ 1 in)
+      Batts:         y=655..703  (48 px fills above foam)
+      Vapor barrier: y=653 (line just above joist tops)
+      Subfloor:      y=641..653  (12 px ≈ ¾ in)
+  -->
+
+  <!-- Joists -->
+  <rect x="269" y="655" width="14" height="60" fill="#c89b6a" stroke="#8a5a2b" stroke-width="1"/>
+  <rect x="423" y="655" width="14" height="60" fill="#c89b6a" stroke="#8a5a2b" stroke-width="1"/>
+  <rect x="577" y="655" width="14" height="60" fill="#c89b6a" stroke="#8a5a2b" stroke-width="1"/>
+
+  <!-- Fiberglass batts (in bays, above foam) -->
+  <rect x="283" y="655" width="140" height="48" fill="#f5d0a9" stroke="#d4944a" stroke-width="0.75"/>
+  <rect x="437" y="655" width="140" height="48" fill="#f5d0a9" stroke="#d4944a" stroke-width="0.75"/>
+  <line x1="283" y1="666" x2="423" y2="666" stroke="#d4944a" stroke-width="0.5" stroke-dasharray="5 4"/>
+  <line x1="283" y1="678" x2="423" y2="678" stroke="#d4944a" stroke-width="0.5" stroke-dasharray="5 4"/>
+  <line x1="283" y1="690" x2="423" y2="690" stroke="#d4944a" stroke-width="0.5" stroke-dasharray="5 4"/>
+  <line x1="437" y1="666" x2="577" y2="666" stroke="#d4944a" stroke-width="0.5" stroke-dasharray="5 4"/>
+  <line x1="437" y1="678" x2="577" y2="678" stroke="#d4944a" stroke-width="0.5" stroke-dasharray="5 4"/>
+  <line x1="437" y1="690" x2="577" y2="690" stroke="#d4944a" stroke-width="0.5" stroke-dasharray="5 4"/>
+
+  <!-- XPS foam board (bottom of bays, rests on HW cloth) -->
+  <rect x="283" y="703" width="140" height="12" fill="#a8d4f5" stroke="#4a7fa5" stroke-width="0.75"/>
+  <rect x="437" y="703" width="140" height="12" fill="#a8d4f5" stroke="#4a7fa5" stroke-width="0.75"/>
+
+  <!-- Hardware cloth (continuous at joist-bottom face) -->
+  <line x1="250" y1="715" x2="610" y2="715" stroke="#4a4a4a" stroke-width="2.5"/>
+  <line x1="260" y1="712" x2="260" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="275" y1="712" x2="275" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="290" y1="712" x2="290" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="305" y1="712" x2="305" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="320" y1="712" x2="320" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="335" y1="712" x2="335" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="350" y1="712" x2="350" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="365" y1="712" x2="365" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="380" y1="712" x2="380" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="395" y1="712" x2="395" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="410" y1="712" x2="410" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="425" y1="712" x2="425" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="440" y1="712" x2="440" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="455" y1="712" x2="455" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="470" y1="712" x2="470" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="485" y1="712" x2="485" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="500" y1="712" x2="500" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="515" y1="712" x2="515" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="530" y1="712" x2="530" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="545" y1="712" x2="545" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="560" y1="712" x2="560" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="575" y1="712" x2="575" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="590" y1="712" x2="590" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+  <line x1="605" y1="712" x2="605" y2="718" stroke="#4a4a4a" stroke-width="1"/>
+
+  <!-- Vapor barrier (warm side, above joist tops) -->
+  <line x1="250" y1="653" x2="610" y2="653" stroke="#3a6ea5" stroke-width="3"/>
+
+  <!-- Subfloor plywood -->
+  <rect x="250" y="641" width="360" height="12" fill="#d4b483" stroke="#8a6a32" stroke-width="1"/>
+  <line x1="346" y1="641" x2="346" y2="653" stroke="#8a6a32" stroke-width="0.75"/>
+  <line x1="442" y1="641" x2="442" y2="653" stroke="#8a6a32" stroke-width="0.75"/>
+  <line x1="538" y1="641" x2="538" y2="653" stroke="#8a6a32" stroke-width="0.75"/>
+
+  <!-- Right-side labels -->
+  <line x1="610" y1="647" x2="628" y2="647" stroke="#4c463f" stroke-width="1"/>
+  <text x="632" y="651" font-size="10" fill="#22201d">¾″ CDX plywood subfloor</text>
+
+  <line x1="610" y1="653" x2="628" y2="663" stroke="#3a6ea5" stroke-width="1"/>
+  <text x="632" y="667" font-size="10" fill="#3a6ea5">6-mil poly vapor barrier (warm side)</text>
+
+  <line x1="591" y1="683" x2="628" y2="683" stroke="#4c463f" stroke-width="1"/>
+  <text x="632" y="687" font-size="10" fill="#22201d">2×6 PT joist (5.5″ cavity)</text>
+
+  <!-- Left-side labels -->
+  <line x1="269" y1="677" x2="247" y2="677" stroke="#4c463f" stroke-width="1"/>
+  <text x="243" y="681" text-anchor="end" font-size="10" fill="#22201d">R-19 fiberglass batts</text>
+
+  <line x1="269" y1="709" x2="247" y2="709" stroke="#4c463f" stroke-width="1"/>
+  <text x="243" y="713" text-anchor="end" font-size="10" fill="#22201d">1″ XPS foam board</text>
+
+  <line x1="269" y1="715" x2="247" y2="726" stroke="#4c463f" stroke-width="1"/>
+  <text x="243" y="730" text-anchor="end" font-size="10" fill="#22201d">¼″ galv. hardware cloth</text>
+
+  <!-- Assembly order note -->
+  <text x="430" y="750" text-anchor="middle" font-size="9" fill="#4c463f" font-style="italic">Install order: staple HW cloth to joist bottoms → push foam up from below → drop batts from above → lay vapor barrier → screw down subfloor</text>
+</svg>

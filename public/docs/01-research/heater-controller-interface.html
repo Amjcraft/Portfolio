@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvia Heater &amp; Controller Interface — Suana</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html">🔥 Suana</a>
+  <div class="brand-sub">Outdoor electric sauna — build project</div>
+  <div class="nav-section">Home</div><ul><li><a href="../README.html">Suana — Project Home</a></li></ul><div class="nav-section">Overview</div><ul><li><a href="../00-overview/glossary.html">Glossary</a></li><li><a href="../00-overview/project-charter.html">Project Charter</a></li></ul><div class="nav-section">Research</div><ul><li><a href="../01-research/README.html">Research</a></li><li><a href="../01-research/aspen-pricing.html">Aspen Pricing (PNW)</a></li><li><a href="../01-research/heater-controller-interface.html" class="active">Harvia Heater &amp; Controller Interface</a></li><li><a href="../01-research/pdf-digests.html">PDF Research Digests</a></li><li><a href="../01-research/hemlock-pricing.html">Western Hemlock Pricing (PNW)</a></li><li><a href="../01-research/cedar-pricing.html">Western Red Cedar Pricing (PNW)</a></li></ul><div class="nav-section">Planning</div><ul><li><a href="../02-planning/budget.html">Budget</a></li><li><a href="../02-planning/cost-options.html">Cost Options (Value Engineering)</a></li><li><a href="../02-planning/materials-and-tools.html">Materials &amp; Tools</a></li><li><a href="../02-planning/materials-summary.html">Materials Summary (Procurement)</a></li><li><a href="../02-planning/permits-and-code.html">Permits &amp; Code</a></li><li><a href="../02-planning/requirements.html">Requirements</a></li><li><a href="../02-planning/site-assessment.html">Site Assessment</a></li></ul><div class="nav-section">Design</div><ul><li><a href="../03-design/README.html">Design</a></li><li><a href="../03-design/benches-and-interior.html">Benches &amp; Interior</a></li><li><a href="../03-design/construction-drawings.html">Construction Drawings</a></li><li><a href="../03-design/dimensions-and-layout.html">Dimensions &amp; Layout</a></li><li><a href="../03-design/electrical-and-heater.html">Electrical &amp; Heater</a></li><li><a href="../03-design/foundation.html">Foundation &amp; Base</a></li><li><a href="../03-design/framing.html">Framing</a></li><li><a href="../03-design/insulation-and-vapor-barrier.html">Insulation &amp; Vapor Barrier</a></li><li><a href="../03-design/interior-cladding.html">Interior Cladding</a></li><li><a href="../03-design/ventilation.html">Ventilation</a></li></ul><div class="nav-section">Build Guide</div><ul><li><a href="../04-build-guide/README.html">Build Guide</a></li><li><a href="../04-build-guide/01-base-structure.html">Base Structure — Floor, Walls &amp; Roof Shell</a></li></ul><div class="nav-section">Reference</div><ul><li><a href="../05-reference/maintenance.html">Maintenance</a></li><li><a href="../05-reference/standards-and-codes.html">Standards &amp; Codes</a></li><li><a href="../05-reference/suppliers.html">Suppliers</a></li></ul>
+</aside>
+<main class="content">
+  <header class="doc-header">
+    <h1>Harvia Heater &amp; Controller Interface</h1>
+    <div class="doc-meta">
+      <span class="badge badge-section">Research</span>
+      <span class="badge badge-status status-in-progress">in-progress</span>
+      <span>Updated 2026-08-17</span>
+    </div>
+  </header>
+  <nav class="toc"><div class="toc-title">On this page</div><ul><li class="lvl-2"><a href="#overview">Overview</a></li><li class="lvl-2"><a href="#key-points">Key points</a></li><li class="lvl-2"><a href="#details">Details</a></li><li class="lvl-3"><a href="#the-two-heater-families-pick-this-deliberately">The two heater families (pick this deliberately)</a></li><li class="lvl-3"><a href="#how-harvias-own-system-is-wired-the-architecture-to-replicate">How Harvia’s own system is wired (the architecture to replicate)</a></li><li class="lvl-3"><a href="#what-a-diy-controller-actually-has-to-do">What a DIY controller actually has to do</a></li><li class="lvl-3"><a href="#prior-art-diy-is-proven-but-treat-as-reference-only">Prior art (DIY is proven, but treat as reference only)</a></li><li class="lvl-2"><a href="#open-questions-to-do">Open questions / to-do</a></li><li class="lvl-2"><a href="#sources">Sources</a></li></ul></nav>
+  <article><h2 id="overview">Overview <a class="anchor" href="#overview" aria-hidden="true">#</a></h2>
+<p>Research into the <strong>Harvia electric heater</strong> we’re planning (7–9 kW range, model TBD)
+and — the real question — <strong>how a controller connects to it</strong>, and whether a DIY
+controller is a realistic substitute for Harvia’s own (expensive) control units.</p>
+<p>Short answer: it is <strong>not</strong> a matter of tapping an on/off switch. Harvia’s
+“separate control unit” heaters have <strong>no switching or thermostat on board</strong> — the
+control unit <em>is</em> the switchgear. Any DIY controller has to replicate three jobs:
+<strong>switch the high-current load (via a contactor), read the temperature sensor, and
+honor the independent overheat cutoff.</strong> That’s very doable, but it’s mains-current
+work, not a hobby relay on the element wire.</p>
+<h2 id="key-points">Key points <a class="anchor" href="#key-points" aria-hidden="true">#</a></h2>
+<ul>
+<li>Harvia heaters come in <strong>two families</strong>: <strong>built-in-control</strong> models (thermostat +
+timer knobs on the unit — e.g. KIP-W, Cilindro PC) and <strong>control-unit-required</strong>
+models (e.g. KIP-E, Cilindro PC-E, larger units) that ship with <strong>no controls</strong>.</li>
+<li>The <strong>control unit is really two boxes</strong>: a <strong>power/contactor unit</strong> (the switching
+hardware, mounted near the heater) and a <strong>control panel</strong> (the wall keypad). On the
+compact <strong>Xenio CX30/CX45</strong> these are combined into one box up to <strong>11 kW</strong>.</li>
+<li>The heater itself is essentially <strong>elements + a terminal block + a pocket for the
+temperature sensor</strong>. All intelligence lives in the control/power unit.</li>
+<li><strong>The load is switched by a contactor</strong>, not by the controller’s electronics
+directly. 8 kW @ 240 V ≈ <strong>33 A</strong> — far beyond any PCB relay. The control panel’s
+low-current signal energizes the <strong>contactor coil</strong>, which throws the heater power.</li>
+<li>The <strong>temperature sensor (Harvia WX232)</strong> contains <strong>two elements</strong>: an <strong>NTC
+thermistor</strong> (22 kΩ @ 25 °C) for temperature <em>reading</em>, and a <strong>separate resettable
+overheat protector</strong> (150 °C limiter) wired into a safety circuit — an independent
+hardware cutoff, not something the software controls.</li>
+<li>Harvia’s own panel↔power-unit link is a <strong>proprietary data cable (RJ10 4P4C)</strong>.
+It is <strong>not</strong> a documented open protocol — so a DIY build <strong>replaces the whole
+control unit</strong>, it doesn’t “plug into” Harvia’s panel port.</li>
+</ul>
+<h2 id="details">Details <a class="anchor" href="#details" aria-hidden="true">#</a></h2>
+<h3 id="the-two-heater-families-pick-this-deliberately">The two heater families (pick this deliberately) <a class="anchor" href="#the-two-heater-families-pick-this-deliberately" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Examples (~8 kW)</th>
+<th>Controls</th>
+<th>Implication for us</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Built-in controls</strong></td>
+<td>KIP80W, Cilindro PC80</td>
+<td>Thermostat + 1–8 h timer on the unit</td>
+<td>Cheapest, simplest; <strong>no easy external automation</strong> — you’d be hacking the knob</td>
+</tr>
+<tr>
+<td><strong>Control-unit-required</strong></td>
+<td>KIP80E, Cilindro PC-E, Virta</td>
+<td><strong>None on heater</strong></td>
+<td>Designed to be driven by an external unit → <strong>this is the family a DIY controller targets</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Decision needed:</strong> If we want <em>any</em> smart/scheduled/remote control (DIY or Harvia),
+we should buy a <strong>“-E” / control-unit-required heater</strong>, not a built-in-control model.
+A built-in-controls heater is the wrong starting point for a custom controller.</p>
+</blockquote>
+<h3 id="how-harvias-own-system-is-wired-the-architecture-to-replicate">How Harvia’s own system is wired (the architecture to replicate) <a class="anchor" href="#how-harvias-own-system-is-wired-the-architecture-to-replicate" aria-hidden="true">#</a></h3>
+<p>Power and signal are separated into two boxes:</p>
+<ol>
+<li><strong>Power unit / contactor box</strong> — mounted ~1 ft off the floor near the heater. This
+is the switchgear. Terminals on the Xenio CX30/CX45:
+<ul>
+<li><strong>L1/L2 in</strong> — incoming power from the breaker.</li>
+<li><strong>L1/L2 out (arrow-marked)</strong> — power <em>out</em> to the heater.</li>
+<li><strong>A1/A2</strong> — 14 ga <strong>safety leads</strong> to the heater’s high-limit circuit (mandatory).</li>
+<li><strong>Temperature sensor leads</strong> — land on the control card in order <strong>blue, white,
+red, yellow</strong> (NTC pair + overheat-protector pair).</li>
+<li><strong>Left RJ jack</strong> — data cable to the wall control panel (right jack is unused).</li>
+<li><strong>Neutral</strong> — only needed if switching a light/accessory.</li>
+</ul>
+</li>
+<li><strong>Control panel</strong> — the wall keypad. Sends a <strong>low-current command</strong> down the RJ10
+data cable; the power unit’s <strong>contactor</strong> does the actual high-current switching.</li>
+</ol>
+<p>So the signal chain is: <strong>panel → data cable → power-unit logic → contactor coil →
+contactor throws L1/L2 → heater elements.</strong> The NTC feeds temperature back to the logic;
+the overheat protector sits in a hardwired safety loop that can drop the contactor
+regardless of the software.</p>
+<p>Contactor sizing matters: Harvia’s own <strong>K1 contactor spare is rated ~25 A per pole</strong>,
+and the combined CX30/CX45 power unit tops out at <strong>11 kW</strong>. Above that Harvia moves to
+separate/larger contactor units (WX-series). Our 7–9 kW single-phase load (~30–37 A)
+is right at the edge where a <strong>single properly-rated contactor (≥40 A, sauna/heating
+duty)</strong> is required.</p>
+<h3 id="what-a-diy-controller-actually-has-to-do">What a DIY controller actually has to do <a class="anchor" href="#what-a-diy-controller-actually-has-to-do" aria-hidden="true">#</a></h3>
+<p>It is <strong>not</strong> “hook up to the on/off switch.” A control-unit-required heater has no
+switch to tap. A DIY controller <strong>is</strong> the control unit, so it must provide:</p>
+<ol>
+<li><strong>Contactor switching</strong> — a mains-rated <strong>contactor</strong> (not a PCB relay) sized to the
+heater’s full current with margin. The microcontroller only drives the <strong>contactor
+coil</strong> (e.g. via a small SSR or pilot relay). This is the single most important
+safety point: <strong>the Arduino/ESP never carries heater current.</strong></li>
+<li><strong>Temperature sensing</strong> — either read Harvia’s <strong>NTC (22 kΩ @ 25 °C)</strong> via a divider,
+or add a probe rated for sauna temps (DS18B20 tops out ~125 °C — marginal for a
+150 °C+ sensor pocket; a <strong>K-type thermocouple + amp</strong>, or a <strong>PT100/PT1000</strong>, is the
+more honest choice at sauna temperatures).</li>
+<li><strong>Independent overheat cutoff</strong> — keep the WX232’s <strong>resettable overheat protector</strong>
+(or an equivalent thermal fuse/limit) <strong>in series with the contactor coil</strong> as a
+hardware interlock, so an overheat drops the contactor <strong>even if the software hangs</strong>.
+This must be independent of the MCU.</li>
+<li><strong>Fail-safe design</strong> — wiring must <strong>fail open (heater OFF)</strong> on loss of MCU power,
+sensor fault, or coil-drive fault. (Community projects flag cheap relay boards that
+fail <em>closed</em> — unacceptable for a heater.)</li>
+<li><strong>Session timer / max-on limit</strong> — code requires heaters to auto-shut-off after a set
+period; the controller must enforce this.</li>
+</ol>
+<h3 id="prior-art-diy-is-proven-but-treat-as-reference-only">Prior art (DIY is proven, but treat as reference only) <a class="anchor" href="#prior-art-diy-is-proven-but-treat-as-reference-only" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong><code>Kobra/arduino-sauna</code></strong> (GitHub) — Arduino Uno + DS18B20 probe + RTC + a single
+relay driving furnace power, explicitly built around a Harvia furnace. Demonstrates
+the pattern but uses a low-current relay and a probe under-rated for full sauna heat.</li>
+<li>Arduino/element14 forum threads describe the correct pattern: <strong>SSR drives a contactor
+coil</strong>, flyback diodes on DC coils, decoupling caps to survive contactor EMI.</li>
+<li><strong>ESP32 + WiFi</strong> would give us MyHarvia-style remote/scheduling for a fraction of the
+cost of Harvia’s WiFi panel — the appeal that’s driving this DIY question.</li>
+</ul>
+<blockquote>
+<p><strong>Warning (safety- &amp; code-critical):</strong> This is a fixed-wired 30–37 A appliance.
+A DIY controller means we are the ones responsible for contactor sizing, the overheat
+interlock, GFCI/disconnect, and fail-open behavior. Many jurisdictions expect a
+<strong>listed</strong> control on a sauna heater; a home-built controller may not pass inspection
+or satisfy insurance. Verify against local code before committing (see
+<code>../02-planning/permits-and-code.md</code>). A hybrid — <strong>Harvia power/contactor unit doing
+the switching + our own low-voltage logic driving its coil</strong> — may be the safest path
+to “DIY smarts without DIY mains switchgear.”</p>
+</blockquote>
+<h2 id="open-questions-to-do">Open questions / to-do <a class="anchor" href="#open-questions-to-do" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Lock the exact heater model &amp; phase (1-phase vs 3-phase changes contactor/wiring).</li>
+<li>[ ] Confirm 7–9 kW full-load amps at our supply voltage → size contactor (≥40 A) &amp; breaker.</li>
+<li>[ ] Decide temp-sensing element rated for ≥150 °C (thermocouple vs PT1000 vs reuse NTC).</li>
+<li>[ ] Confirm whether local code/inspection requires a <strong>listed</strong> sauna control.</li>
+<li>[ ] Decide DIY-full vs <strong>hybrid</strong> (drive a genuine Harvia contactor unit’s coil).</li>
+<li>[ ] Get a <em>readable</em> Xenio CX30/CX45 manual for exact terminal/sensor pinout (scanned PDF was unreadable).</li>
+</ul>
+<h2 id="sources">Sources <a class="anchor" href="#sources" aria-hidden="true">#</a></h2>
+<ul>
+<li>Harvia KIP80E 8 kW product page — <a href="https://www.harvia.com/en-US/products/HEK800230/kip80e-80-kw-black">https://www.harvia.com/en-US/products/HEK800230/kip80e-80-kw-black</a></li>
+<li>Harvia KIP wall heaters (built-in vs separate control) — <a href="https://www.harvia.com/en-US/sauna-heaters/electric-sauna-heater/kip-wall-mounted-heaters/">https://www.harvia.com/en-US/sauna-heaters/electric-sauna-heater/kip-wall-mounted-heaters/</a></li>
+<li>Harvia Xenio CX30 / CX45 control+power unit (≤11 kW) — <a href="https://www.harvia.com/en-US/products/CX45-U1-U3/xenio-cx45-208v240v">https://www.harvia.com/en-US/products/CX45-U1-U3/xenio-cx45-208v240v</a></li>
+<li>Sauna Place — “Harvia CX30/CX45 Power Unit Setup: Sensors, Controller &amp; Wiring Basics” — <a href="https://www.saunaplace.com/blogs/blogs/harvia-cx30-cx45-power-unit-setup-sensors-controller-wiring-basics">https://www.saunaplace.com/blogs/blogs/harvia-cx30-cx45-power-unit-setup-sensors-controller-wiring-basics</a></li>
+<li>Harvia WX232 temperature sensor (NTC 22 kΩ @ 25 °C + resettable overheat protector) — <a href="https://www.harvia.com/en-US/products/SP232/temperature-sensor-max-150c-limiter-white">https://www.harvia.com/en-US/products/SP232/temperature-sensor-max-150c-limiter-white</a></li>
+<li>Harvia K1 contactor spare (~25 A, 3-phase) — <a href="https://www.harvia.com/en/products/SP207/contactor-k1-3-blocks">https://www.harvia.com/en/products/SP207/contactor-k1-3-blocks</a></li>
+<li>Harvia data cable RJ10 4P4C (panel ↔ power unit) — <a href="https://www.harvia.com/en-US/products/SP311/data-cable-rj10-4p4c-5-m-rj10-black">https://www.harvia.com/en-US/products/SP311/data-cable-rj10-4p4c-5-m-rj10-black</a></li>
+<li>DIY reference: <code>Kobra/arduino-sauna</code> — <a href="https://github.com/Kobra/arduino-sauna">https://github.com/Kobra/arduino-sauna</a></li>
+<li>DIY discussion (SSR→contactor coil pattern) — <a href="https://community.element14.com/products/arduino/f/arduino-forum/8439/sauna-heater-control-help-needed">https://community.element14.com/products/arduino/f/arduino-forum/8439/sauna-heater-control-help-needed</a></li>
+</ul>
+</article>
+  <footer class="doc-footer">
+    Suana build docs · source: <code>docs/src/01-research/heater-controller-interface.md</code>
+  </footer>
+</main>
+</div>
+</body>
+</html>

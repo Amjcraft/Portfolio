@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 600" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="740" height="600" fill="#fbf7f0"/>
+  <text x="370" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#5e3d1c">Base Structure — Build Stages</text>
+  <text x="370" y="54" text-anchor="middle" font-size="12" fill="#4c463f">Front elevation · shed slopes side-to-side (high left → low right) · sauna sits under an existing roof</text>
+
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#c89b6a"/></marker>
+  </defs>
+
+  <!-- ============ STAGE 1 · verify slab & lay out ============ -->
+  <g transform="translate(30,80)">
+    <rect x="0" y="0" width="210" height="215" fill="#fff" stroke="#e0d4c1"/>
+    <text x="16" y="22" font-size="13" font-weight="700" fill="#c1440e">1 · Verify slab &amp; lay out</text>
+    <rect x="28" y="168" width="154" height="10" fill="#b9b9b9" stroke="#7d7d7d"/>
+    <!-- chalk footprint + wall-line marks -->
+    <rect x="33" y="120" width="144" height="48" fill="none" stroke="#c1440e" stroke-width="1.4" stroke-dasharray="5 3"/>
+    <line x1="33" y1="168" x2="177" y2="120" stroke="#c1440e" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="33" y1="120" x2="177" y2="168" stroke="#c1440e" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="105" y="112" text-anchor="middle" font-size="9" fill="#c1440e">diagonals equal = square ✓</text>
+    <!-- drain exit mark -->
+    <circle cx="177" cy="163" r="4" fill="none" stroke="#3a6ea5" stroke-width="1.6"/>
+    <text x="176" y="150" text-anchor="middle" font-size="8" fill="#3a6ea5">drain exit</text>
+    <text x="105" y="200" text-anchor="middle" font-size="9" fill="#4c463f">Snap lines · 3-4-5 square · drain exit</text>
+  </g>
+
+  <!-- ============ STAGE 2 · raised floor platform ============ -->
+  <g transform="translate(265,80)">
+    <rect x="0" y="0" width="210" height="215" fill="#fff" stroke="#e0d4c1"/>
+    <text x="16" y="22" font-size="13" font-weight="700" fill="#c1440e">2 · Raised floor platform</text>
+    <rect x="28" y="168" width="154" height="10" fill="#b9b9b9" stroke="#7d7d7d"/>
+    <!-- platform -->
+    <rect x="30" y="154" width="150" height="14" fill="#d9b98a" stroke="#8a5a2b"/>
+    <g stroke="#8a5a2b" stroke-width="1"><line x1="45" y1="154" x2="45" y2="168"/><line x1="65" y1="154" x2="65" y2="168"/><line x1="85" y1="154" x2="85" y2="168"/><line x1="105" y1="154" x2="105" y2="168"/><line x1="125" y1="154" x2="125" y2="168"/><line x1="145" y1="154" x2="145" y2="168"/><line x1="165" y1="154" x2="165" y2="168"/></g>
+    <!-- subfloor -->
+    <rect x="30" y="150" width="150" height="4" fill="#c89b6a" stroke="#8a5a2b"/>
+    <!-- drain in cavity -->
+    <line x1="95" y1="161" x2="188" y2="165" stroke="#3a6ea5" stroke-width="3"/>
+    <text x="150" y="148" text-anchor="middle" font-size="8" fill="#3a6ea5">2″ PVC → out</text>
+    <text x="105" y="200" text-anchor="middle" font-size="9" fill="#4c463f">PT 2×6 joists @16″ · drain · ¾″ subfloor</text>
+  </g>
+
+  <!-- ============ STAGE 3 · frame the walls ============ -->
+  <g transform="translate(500,80)">
+    <rect x="0" y="0" width="210" height="215" fill="#fff" stroke="#e0d4c1"/>
+    <text x="16" y="22" font-size="13" font-weight="700" fill="#c1440e">3 · Frame the walls</text>
+    <rect x="28" y="168" width="154" height="10" fill="#b9b9b9" stroke="#7d7d7d"/>
+    <rect x="30" y="154" width="150" height="14" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="30" y="150" width="150" height="4" fill="#c89b6a" stroke="#8a5a2b"/>
+    <!-- bottom plate -->
+    <rect x="33" y="150" width="144" height="5" fill="#d9b98a" stroke="#8a5a2b"/>
+    <!-- double sloped top plate -->
+    <line x1="33" y1="76" x2="177" y2="95" stroke="#8a5a2b" stroke-width="2"/>
+    <line x1="33" y1="72" x2="177" y2="91" stroke="#8a5a2b" stroke-width="2"/>
+    <!-- studs -->
+    <g stroke="#8a5a2b" stroke-width="1.6">
+      <line x1="40" y1="76.9" x2="40" y2="150"/>
+      <line x1="58" y1="79.3" x2="58" y2="150"/>
+      <line x1="76" y1="81.7" x2="76" y2="150"/>
+      <line x1="90" y1="83.5" x2="90" y2="150"/>
+      <line x1="124" y1="88.0" x2="124" y2="150"/>
+      <line x1="142" y1="90.4" x2="142" y2="150"/>
+      <line x1="160" y1="92.8" x2="160" y2="150"/>
+      <line x1="174" y1="94.6" x2="174" y2="150"/>
+    </g>
+    <!-- door RO + header -->
+    <rect x="94" y="112" width="26" height="6" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="96" y="118" width="22" height="32" fill="#fff" stroke="#8a5a2b"/>
+    <text x="107" y="110" text-anchor="middle" font-size="7.5" fill="#4c463f">2×6 header</text>
+    <text x="105" y="200" text-anchor="middle" font-size="9" fill="#4c463f">Studs @16″ · sloped plate · door RO</text>
+  </g>
+
+  <!-- ============ STAGE 4 · sheathe the walls ============ -->
+  <g transform="translate(30,330)">
+    <rect x="0" y="0" width="210" height="230" fill="#fff" stroke="#e0d4c1"/>
+    <text x="16" y="22" font-size="13" font-weight="700" fill="#c1440e">4 · Sheathe the walls</text>
+    <rect x="28" y="168" width="154" height="10" fill="#b9b9b9" stroke="#7d7d7d"/>
+    <rect x="30" y="154" width="150" height="14" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="30" y="150" width="150" height="4" fill="#c89b6a" stroke="#8a5a2b"/>
+    <!-- sheathing over studs -->
+    <polygon points="33,74 177,93 177,150 33,150" fill="#e7d7bf" stroke="#5e3d1c"/>
+    <!-- panel seams -->
+    <g stroke="#d8c6a8" stroke-width="1"><line x1="81" y1="80" x2="81" y2="150"/><line x1="129" y1="86" x2="129" y2="150"/></g>
+    <!-- door cut -->
+    <rect x="94" y="112" width="26" height="6" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="96" y="118" width="22" height="32" fill="#fff" stroke="#8a5a2b"/>
+    <text x="105" y="216" text-anchor="middle" font-size="9" fill="#4c463f">Sheathing on · box rigid · openings cut</text>
+  </g>
+
+  <!-- ============ STAGE 5 · frame the shed roof ============ -->
+  <g transform="translate(265,330)">
+    <rect x="0" y="0" width="210" height="230" fill="#fff" stroke="#e0d4c1"/>
+    <text x="16" y="22" font-size="13" font-weight="700" fill="#c1440e">5 · Frame the shed roof</text>
+    <rect x="28" y="168" width="154" height="10" fill="#b9b9b9" stroke="#7d7d7d"/>
+    <rect x="30" y="154" width="150" height="14" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="30" y="150" width="150" height="4" fill="#c89b6a" stroke="#8a5a2b"/>
+    <polygon points="33,74 177,93 177,150 33,150" fill="#e7d7bf" stroke="#5e3d1c"/>
+    <rect x="94" y="112" width="26" height="6" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="96" y="118" width="22" height="32" fill="#fff" stroke="#8a5a2b"/>
+    <!-- roof rafters (open frame) with overhang -->
+    <polygon points="20,70 190,90 190,97 20,77" fill="#d9b98a" stroke="#8a5a2b"/>
+    <g stroke="#8a5a2b" stroke-width="1.2">
+      <line x1="40" y1="72.4" x2="40" y2="79.4"/>
+      <line x1="70" y1="75.9" x2="70" y2="82.9"/>
+      <line x1="100" y1="79.4" x2="100" y2="86.4"/>
+      <line x1="130" y1="82.9" x2="130" y2="89.9"/>
+      <line x1="160" y1="86.5" x2="160" y2="93.5"/>
+    </g>
+    <text x="105" y="216" text-anchor="middle" font-size="9" fill="#4c463f">2×6 rafters @16″ · 6–12″ overhang</text>
+  </g>
+
+  <!-- ============ STAGE 6 · sheathe & dry-in ============ -->
+  <g transform="translate(500,330)">
+    <rect x="0" y="0" width="210" height="230" fill="#fff" stroke="#e0d4c1"/>
+    <text x="16" y="22" font-size="13" font-weight="700" fill="#2e7d32">6 · Sheathe &amp; dry-in</text>
+    <!-- existing building roof above -->
+    <line x1="14" y1="44" x2="196" y2="44" stroke="#7d7d7d" stroke-width="2" stroke-dasharray="6 3"/>
+    <g stroke="#7d7d7d" stroke-width="0.8"><line x1="22" y1="44" x2="16" y2="50"/><line x1="42" y1="44" x2="36" y2="50"/><line x1="62" y1="44" x2="56" y2="50"/><line x1="82" y1="44" x2="76" y2="50"/><line x1="102" y1="44" x2="96" y2="50"/><line x1="122" y1="44" x2="116" y2="50"/><line x1="142" y1="44" x2="136" y2="50"/><line x1="162" y1="44" x2="156" y2="50"/><line x1="182" y1="44" x2="176" y2="50"/></g>
+    <text x="105" y="40" text-anchor="middle" font-size="8" fill="#7d7d7d">existing building roof above</text>
+    <rect x="28" y="168" width="154" height="10" fill="#b9b9b9" stroke="#7d7d7d"/>
+    <rect x="30" y="154" width="150" height="14" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="30" y="150" width="150" height="4" fill="#c89b6a" stroke="#8a5a2b"/>
+    <polygon points="33,74 177,93 177,150 33,150" fill="#e7d7bf" stroke="#5e3d1c"/>
+    <rect x="94" y="112" width="26" height="6" fill="#d9b98a" stroke="#8a5a2b"/>
+    <rect x="96" y="118" width="22" height="32" fill="#fff" stroke="#8a5a2b"/>
+    <!-- solid roof deck + underlayment -->
+    <polygon points="20,70 190,90 190,97 20,77" fill="#a9793f" stroke="#5e3d1c"/>
+    <line x1="20" y1="69" x2="190" y2="89" stroke="#5e3d1c" stroke-width="1.4" stroke-dasharray="3 2"/>
+    <text x="105" y="216" text-anchor="middle" font-size="9" fill="#4c463f">Roof deck + underlayment · dried-in</text>
+  </g>
+
+  <!-- flow arrows -->
+  <g stroke="#c89b6a" stroke-width="3" fill="none">
+    <path d="M243 188 L262 188" marker-end="url(#a)"/>
+    <path d="M478 188 L497 188" marker-end="url(#a)"/>
+    <path d="M243 445 L262 445" marker-end="url(#a)"/>
+    <path d="M478 445 L497 445" marker-end="url(#a)"/>
+  </g>
+</svg>
