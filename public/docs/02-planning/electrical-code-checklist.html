@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electrical Code Checklist — Suana</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html">🔥 Suana</a>
+  <div class="brand-sub">Outdoor electric sauna — build project</div>
+  <div class="nav-section">Home</div><ul><li><a href="../README.html">Suana — Project Home</a></li></ul><div class="nav-section">Overview</div><ul><li><a href="../00-overview/glossary.html">Glossary</a></li><li><a href="../00-overview/project-charter.html">Project Charter</a></li></ul><div class="nav-section">Research</div><ul><li><a href="../01-research/README.html">Research</a></li><li><a href="../01-research/aspen-pricing.html">Aspen Pricing (PNW)</a></li><li><a href="../01-research/heater-controller-interface.html">Harvia Heater &amp; Controller Interface</a></li><li><a href="../01-research/pdf-digests.html">PDF Research Digests</a></li><li><a href="../01-research/hemlock-pricing.html">Western Hemlock Pricing (PNW)</a></li><li><a href="../01-research/cedar-pricing.html">Western Red Cedar Pricing (PNW)</a></li></ul><div class="nav-section">Planning</div><ul><li><a href="../02-planning/budget.html">Budget</a></li><li><a href="../02-planning/cost-options.html">Cost Options (Value Engineering)</a></li><li><a href="../02-planning/electrical-code-checklist.html" class="active">Electrical Code Checklist</a></li><li><a href="../02-planning/materials-and-tools.html">Materials &amp; Tools</a></li><li><a href="../02-planning/materials-summary.html">Materials Summary (Procurement)</a></li><li><a href="../02-planning/permits-and-code.html">Permits &amp; Code</a></li><li><a href="../02-planning/requirements.html">Requirements</a></li><li><a href="../02-planning/site-assessment.html">Site Assessment</a></li></ul><div class="nav-section">Design</div><ul><li><a href="../03-design/README.html">Design</a></li><li><a href="../03-design/benches-and-interior.html">Benches &amp; Interior</a></li><li><a href="../03-design/construction-drawings.html">Construction Drawings</a></li><li><a href="../03-design/dimensions-and-layout.html">Dimensions &amp; Layout</a></li><li><a href="../03-design/electrical-and-heater.html">Electrical &amp; Heater</a></li><li><a href="../03-design/foundation.html">Foundation &amp; Base</a></li><li><a href="../03-design/framing.html">Framing</a></li><li><a href="../03-design/insulation-and-vapor-barrier.html">Insulation &amp; Vapor Barrier</a></li><li><a href="../03-design/interior-cladding.html">Interior Cladding</a></li><li><a href="../03-design/ventilation.html">Ventilation</a></li></ul><div class="nav-section">Build Guide</div><ul><li><a href="../04-build-guide/README.html">Build Guide</a></li><li><a href="../04-build-guide/01-base-structure.html">Base Structure — Floor, Walls &amp; Roof Shell</a></li></ul><div class="nav-section">Reference</div><ul><li><a href="../05-reference/maintenance.html">Maintenance</a></li><li><a href="../05-reference/standards-and-codes.html">Standards &amp; Codes</a></li><li><a href="../05-reference/suppliers.html">Suppliers</a></li></ul>
+</aside>
+<main class="content">
+  <header class="doc-header">
+    <h1>Electrical Code Checklist</h1>
+    <div class="doc-meta">
+      <span class="badge badge-section">Planning</span>
+      <span class="badge badge-status status-in-progress">in-progress</span>
+      <span>Updated 2026-09-27</span>
+    </div>
+  </header>
+  <nav class="toc"><div class="toc-title">On this page</div><ul><li class="lvl-2"><a href="#overview">Overview</a></li><li class="lvl-2"><a href="#open-decisions-resolve-before-buyingbuilding">Open decisions (resolve before buying/building)</a></li><li class="lvl-2"><a href="#0-before-starting">0. Before starting</a></li><li class="lvl-2"><a href="#1-main-panel-50-a-feeder-breaker">1. Main panel (50 A feeder breaker)</a></li><li class="lvl-2"><a href="#2-nm-cable-runs-panel-garage-crawlspace">2. NM cable runs (panel → garage, crawlspace)</a></li><li class="lvl-2"><a href="#3-junction-boxes-all-three-transitions">3. Junction boxes (all three transitions)</a></li><li class="lvl-2"><a href="#4-single-conductor-conduit-runs-garage-exterior">4. Single-conductor conduit runs (garage + exterior)</a></li><li class="lvl-2"><a href="#5-exterior-subpanel-sauna-disconnect">5. Exterior subpanel (sauna disconnect)</a></li><li class="lvl-2"><a href="#6-grounding-electrode-at-the-sauna">6. Grounding electrode (at the sauna)</a></li><li class="lvl-2"><a href="#7-heater-circuit-subpanel-heater">7. Heater circuit (subpanel → heater)</a></li><li class="lvl-2"><a href="#8-heater-install">8. Heater install</a></li><li class="lvl-2"><a href="#9-lights-exhaust-fan-circuit">9. Lights + exhaust fan circuit</a></li><li class="lvl-2"><a href="#10-receptacle">10. Receptacle</a></li><li class="lvl-2"><a href="#11-inspections">11. Inspections</a></li><li class="lvl-2"><a href="#sources">Sources</a></li></ul></nav>
+  <article><h2 id="overview">Overview <a class="anchor" href="#overview" aria-hidden="true">#</a></h2>
+<p>Step-by-step code checks from the house main panel to the finished heater, for our
+run: 50 A breaker → #6/3 NM → garage j-box → 4 × #6 singles in conduit (~30 ft) →
+j-box → #6/3 NM in crawlspace (60–70 ft) → j-box (inside) → THWN-2 singles in exterior
+conduit → exterior subpanel (45 A heater, 15/20 A lights) → 8 kW heater.</p>
+<p>Refs are NEC 2023; <strong>2026:</strong> notes renumbering. <strong>OR</strong> = Oregon Table 1-E amendment;
+<strong>ORSC</strong> = Oregon residential code; <strong>Mfr</strong> = Harvia US manual (enforceable via 110.3(B)).
+The <strong>2026 OESC</strong> (NEC 2026 + OR amendments) takes effect <strong>Oct 1, 2026</strong>.</p>
+<blockquote>
+<p><strong>Warning:</strong> Safety- and code-critical. Each section was reviewed against NEC
+2023/2026, Oregon Table 1-E (2023 &amp; 2026), ORSC M1902, and the Harvia US manuals
+(2026-09-27). This is a checklist, not a code substitute — confirm with City of Bend
+Building Safety (541-388-5580).</p>
+</blockquote>
+<h2 id="open-decisions-resolve-before-buyingbuilding">Open decisions (resolve before buying/building) <a class="anchor" href="#open-decisions-resolve-before-buyingbuilding" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] <strong>Power unit location.</strong> Harvia: dry, not outdoors, outside the hot room, 32–104 °F. No anteroom → need a vestibule, a house/garage wall, or a built-in-control heater. Sensor lead is ~13 ft.</li>
+<li>[ ] <strong>Heater circuit route.</strong> Across the header is the hottest zone — #8 fails above ~60 °C. Reroute low (4–6″ off floor).</li>
+<li>[ ] <strong>Exhaust fan location.</strong> Bath fans are ~40 °C rated; Mfr: no fan in the sauna. Put it outside the hot room (inline/exterior).</li>
+<li>[ ] <strong>Receptacle.</strong> Code requires one; Mfr forbids one inside. Get AHJ OK on an exterior one in writing.</li>
+<li>[ ] <strong>Slab rebar.</strong> Ask AHJ whether the existing slab must be bonded as an electrode.</li>
+<li>[ ] <strong>Room volume.</strong> ~408 ft³ is near the top of 8 kW ranges; KIP-80 max 425 ft³, Virta/Cilindro ceiling ≤ 7′6″.</li>
+</ul>
+<h2 id="0-before-starting">0. Before starting <a class="anchor" href="#0-before-starting" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Owner (a natural person, not an LLC) pulls the permit; owner or immediate family does the work (ORS 479.540, OAR 918-261-0040).</li>
+<li>[ ] AHJ confirmed: City of Bend (in city) or Deschutes County.</li>
+<li>[ ] Code edition confirmed (2023 vs 2026 OESC).</li>
+<li>[ ] No building permit needed: ≤ 200 sq ft, ≤ 15 ft tall (ORSC R105.2). ORSC M1902 still applies.</li>
+<li>[ ] Zoning setbacks checked (BDC 3.6.200).</li>
+<li>[ ] Heater manual on hand (110.3(B)).</li>
+<li>[ ] Heater breaker = <strong>45 A</strong>: 33.3 A × 125% = 41.7 A (continuous load; 210.20(A), 422.10). Not 40 A.</li>
+<li>[ ] One-line diagram + load calc ready (220.83; <strong>2026:</strong> 120.83).</li>
+<li>[ ] Call 811 before driving ground rods.</li>
+</ul>
+<h2 id="1-main-panel-50-a-feeder-breaker">1. Main panel (50 A feeder breaker) <a class="anchor" href="#1-main-panel-50-a-feeder-breaker" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] 50 A 2-pole breaker listed for the panel (110.3(B)).</li>
+<li>[ ] Panel bus/main has room for the added load.</li>
+<li>[ ] No double-taps; one neutral per terminal (408.41).</li>
+<li>[ ] NM secured with a listed clamp; one cable per clamp unless listed for two (312.5©; <strong>2026:</strong> 312.8©).</li>
+<li>[ ] Neutral to neutral bar, ground to ground bar (bonded here — it’s the service).</li>
+<li>[ ] Lugs torqued to marked spec (110.14(D)).</li>
+<li>[ ] Directory entry “Sauna subpanel” (408.4(A)).</li>
+<li>[ ] Unused knockouts closed (110.12(A)).</li>
+<li>[ ] Service barriers reinstalled if the panel has them (OR 230.62©).</li>
+<li>[ ] Feeder check: ~41.7 A heater + ~2.5 A lights ≈ 44 A ≤ 50 A; #6 NM = 55 A (215.2, 334.80).</li>
+</ul>
+<h2 id="2-nm-cable-runs-panel-garage-crawlspace">2. NM cable runs (panel → garage, crawlspace) <a class="anchor" href="#2-nm-cable-runs-panel-garage-crawlspace" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] #6/3 Cu NM-B with ground.</li>
+<li>[ ] Listed staples/straps sized for 6/3; never stapled on edge (OR 334.2, 334.30).</li>
+<li>[ ] Secured within 12″ of each box, every 4½ ft; ≤ 18″ from box to first support (OR 334.30).</li>
+<li>[ ] Holes ≥ 1¼″ from framing edge, else 1/16″ steel plate; same for parallel runs (300.4(A), (D); <strong>2026:</strong> 300.6).</li>
+<li>[ ] Crawlspace: 6/3 may attach to joist bottoms only when crossing joists; parallel runs on joist sides (OR 334.15©).</li>
+<li>[ ] Cable kept off the soil; crawlspace dry/vented (334.12(B)(4) — damp is AHJ’s call).</li>
+<li>[ ] Garage: exposed NM run horizontally &lt; 8 ft above floor protected by EMT/Sch 80/etc. (OR 334.15(B)).</li>
+<li>[ ] Bend radius ≥ 5× cable diameter (334.24).</li>
+<li>[ ] Holes through the garage–house wall firestopped (ORSC R302).</li>
+<li>[ ] NM never in a wet location or outdoor box/conduit (334.12(B)(4)).</li>
+</ul>
+<h2 id="3-junction-boxes-all-three-transitions">3. Junction boxes (all three transitions) <a class="anchor" href="#3-junction-boxes-all-three-transitions" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] <strong>House-exit box is inside the crawlspace</strong> — NM can’t enter an outdoor box; conduit leaves through the wall.</li>
+<li>[ ] Accessible without removing finish (314.29).</li>
+<li>[ ] Box ≥ <strong>4-11/16″ square × 2-1/8″ deep (42 in³)</strong>; 4×4 boxes fail (314.16: 5 in³ per #6).</li>
+<li>[ ] Mounted to structure (314.23).</li>
+<li>[ ] Insulated multi-tap (Polaris-type) connectors listed for #6 Cu, torqued (110.14(B), (D)).</li>
+<li>[ ] No wire nuts unless listed for #6.</li>
+<li>[ ] Listed connectors at every cable/conduit entry; covers on.</li>
+<li>[ ] ≥ 6″ free conductor in each box (300.14).</li>
+<li>[ ] All grounds spliced together; metal box bonded with a green screw (250.148).</li>
+</ul>
+<h2 id="4-single-conductor-conduit-runs-garage-exterior">4. Single-conductor conduit runs (garage + exterior) <a class="anchor" href="#4-single-conductor-conduit-runs-garage-exterior" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Exterior raceway: THWN-2 (wet-rated) conductors (310.10©; 300.9; <strong>2026:</strong> 300.11(A)). THHN OK in the dry garage.</li>
+<li>[ ] Neutral white/gray insulation — #6 can’t be re-marked (200.6(A)).</li>
+<li>[ ] Ground green or bare — #6 can’t be re-marked (250.119(A)).</li>
+<li>[ ] #6 EGC wire in every segment — PVC can’t serve as ground (250.118).</li>
+<li>[ ] All four conductors in the same raceway (300.3(B)).</li>
+<li>[ ] <strong>1″ conduit minimum</strong> — ¾″ Sch 80 fails fill (Ch. 9 Tables 1, 4, 5).</li>
+<li>[ ] EMT: supported within 3 ft of boxes and every 10 ft (358.30); outdoors, wet-rated compression fittings (358.42).</li>
+<li>[ ] 1″ PVC: supported within 3 ft of boxes and every 3 ft (Table 352.30); bushings at ends (352.46).</li>
+<li>[ ] Exterior PVC sunlight-resistant; Sch 80 where it could be hit (352.10(F), 352.12©, 300.4).</li>
+<li>[ ] <strong>Expansion fitting on nearly every exterior PVC run</strong> — ¼″ movement at ~4 ft in Bend’s temperature swing (352.44).</li>
+<li>[ ] ≤ 360° of bends between pull points (352.26 / 358.26).</li>
+<li>[ ] Raceway complete before pulling wire (300.18).</li>
+<li>[ ] Seal where raceway passes interior ↔ exterior, with sealant OK for the insulation; seal spare raceways (300.7(A); <strong>2026:</strong> 300.9(A); OR 300.7(G)).</li>
+<li>[ ] No unsupported span between house and sauna.</li>
+</ul>
+<h2 id="5-exterior-subpanel-sauna-disconnect">5. Exterior subpanel (sauna disconnect) <a class="anchor" href="#5-exterior-subpanel-sauna-disconnect" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] NEMA 3R, listed outdoor, rated ≥ 50 A.</li>
+<li>[ ] Main breaker <strong>or</strong> ≤ 6 breakers grouped here = building disconnect (225.31, 225.33, 225.34).</li>
+<li>[ ] Readily accessible, nearest where the feeder enters (225.31(B); OR 2026 keeps “nearest” inside or out).</li>
+<li>[ ] Bonding screw/strap <strong>removed</strong>; neutral isolated (250.32(B)(1), 250.24(A)(5), 250.142(B)).</li>
+<li>[ ] Separate ground bar; feeder EGC and GEC land on it (408.40, 250.32(A)).</li>
+<li>[ ] IBT or exposed, supported #6 bare Cu outside the panel (OR 250.94(A)).</li>
+<li>[ ] Working space: 36″ deep × 30″ wide (or panel width) × 6½ ft; door opens 90° (110.26(A)).</li>
+<li>[ ] Working space clear of the sauna door swing, steps, plantings.</li>
+<li>[ ] Dedicated space above the panel, grade to 6 ft above, kept clear (110.26(E)(2)).</li>
+<li>[ ] Top breaker handle ≤ 6 ft 7 in (240.24(A)).</li>
+<li>[ ] ¼″ air space behind the enclosure (312.2).</li>
+<li>[ ] Top entries use wet-location hubs; bottom/side preferred (312.2).</li>
+<li>[ ] Only breakers listed for this panel; one neutral per terminal (110.3(B), 408.41).</li>
+<li>[ ] Breakers: 45 A 2-pole heater; 15 A (#14) or 20 A (#12) lights (240.4(D)).</li>
+<li>[ ] Heater breaker has a permanently installed lock-off (422.31(B), 110.25).</li>
+<li>[ ] Lugs torqued; directory filled out; marked “Sauna disconnect” (110.14(D), 408.4(A), 110.22(A)).</li>
+</ul>
+<h2 id="6-grounding-electrode-at-the-sauna">6. Grounding electrode (at the sauna) <a class="anchor" href="#6-grounding-electrode-at-the-sauna" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Required — building is fed by a feeder (250.32(A)).</li>
+<li>[ ] Two 8 ft, 5/8″ rods ≥ 6 ft apart (250.52(A)(5), 250.53(A)(2), (A)(3)).</li>
+<li>[ ] Single rod only with a written ≤ 25 Ω test (OR 250.53(A)(2) Exc. 1) — plan on two in Bend soil.</li>
+<li>[ ] Full 8 ft in soil; tops flush/below grade or clamps protected (250.53(A)(4), 250.10).</li>
+<li>[ ] If rock: drive ≤ 45° or lay in a trench ≥ 30″ deep (250.53(A)(4)).</li>
+<li>[ ] Clamps listed for direct burial; one conductor per clamp unless listed (250.70).</li>
+<li>[ ] #6 Cu GEC, unspliced or irreversibly spliced (250.64©, 250.66(A)).</li>
+<li>[ ] Rod-to-rod jumper #6 Cu (250.53©).</li>
+<li>[ ] Exposed GEC protected or secured tight to the building (250.64(B)).</li>
+<li>[ ] GEC on the ground bar, never the neutral.</li>
+<li>[ ] Rods and clamps left visible for the cover inspection.</li>
+</ul>
+<h2 id="7-heater-circuit-subpanel-heater">7. Heater circuit (subpanel → heater) <a class="anchor" href="#7-heater-circuit-subpanel-heater" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] <strong>Route low (4–6″ off floor), not across the header</strong> — keep out of heater radiation (Mfr).</li>
+<li>[ ] #6 Cu recommended; #8 only with all-75 °C terminals <strong>and</strong> a cool route (110.14©, Table 310.15(B)(1)(1)).</li>
+<li>[ ] If using a Xenio CX45: supply ≥ #6; CX45 → heater #8, 90 °C (Mfr).</li>
+<li>[ ] Copper rated 90 °C (194 °F) inside sauna walls (Mfr).</li>
+<li>[ ] No NM anywhere in the sauna walls or ceiling (334.80, 334.12(B)).</li>
+<li>[ ] Singles in raceway (300.3(A)), or 90 °C MC.</li>
+<li>[ ] Holes ≥ 1¼″ from edge or nail plates (300.4; <strong>2026:</strong> 300.6).</li>
+<li>[ ] Liquidtight flex to the heater’s box, entering 4–6″ above floor, 3 ft slack, 90 °C connector (Mfr).</li>
+<li>[ ] Flex rated for the temperature (350.12) — standard jackets are often 60 °C.</li>
+<li>[ ] Flex strapped within 12″ and every 4½ ft (350.30).</li>
+<li>[ ] <strong>#10 Cu ground wire in the flex</strong> — flex can’t be the ground above 20 A (350.60, 250.118).</li>
+<li>[ ] No plugs or pigtails (Mfr).</li>
+<li>[ ] <strong>No GFCI</strong> — OR 210.8(F) covers outdoor receptacles only; Mfr forbids GFI.</li>
+<li>[ ] Neutral pulled to the power unit (Xenio is “240 V 1N~”).</li>
+</ul>
+<h2 id="8-heater-install">8. Heater install <a class="anchor" href="#8-heater-install" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Heater listed to UL 875 (ORSC M1902.2).</li>
+<li>[ ] Listed pairing: 8 kW on one supply cable → Xenio <strong>CX45</strong> (CX30 max 7 kW) (Mfr).</li>
+<li>[ ] Only listed controls — no DIY controller (110.3(B), ORSC M1902.2).</li>
+<li>[ ] Room within range: KIP-80 250–425 ft³; Virta/Cilindro 8 kW up to 431 ft³, ceiling ≤ 7′6″ (Mfr).</li>
+<li>[ ] Clearances: KIP-80 5″ to walls; Virta 2″ to walls, 42″ top-to-ceiling; min room height 75″ (Mfr).</li>
+<li>[ ] Wood guard around heater (ORSC M1902.1); ≥ 2″ from heater, no taller than heater (Mfr).</li>
+<li>[ ] Heat-resistant floor under heater — concrete/tile/heavy vinyl; no carpet (Mfr).</li>
+<li>[ ] Mounting: KIP on 2×4 backing if wall &lt; ¾″; Cilindro bolted to floor with its kit (Mfr).</li>
+<li>[ ] Power unit dry, not outdoors, outside the hot room, 32–104 °F (Mfr).</li>
+<li>[ ] In-room control panel (if any) ≥ 50 cm from heater, ≤ 1 m above floor (Mfr).</li>
+<li>[ ] Sensor on heater centerline, ~4″ (100 mm) below ceiling (Mfr); within 6″ if separate (ORSC M1902.4).</li>
+<li>[ ] Sensor ≥ 1 m from a 360° vent, ≥ 0.5 m from a directional one; supply air never blows on it (Mfr).</li>
+<li>[ ] Correct sensor model (WX232/WX248 per manual); heater grade set in the control (Mfr).</li>
+<li>[ ] Room limited to 194 °F (ORSC M1902.4); 1-hour max timer works (Mfr/listing).</li>
+<li>[ ] Remote start only with a heater safety switch (Harvia SFE) and 6 h lockout (Mfr).</li>
+<li>[ ] CAUTION placard inside above heater; WARNING placard outside on the door (Mfr).</li>
+<li>[ ] Door opens outward, no lock (Mfr).</li>
+<li>[ ] One heater per room (Mfr).</li>
+<li>[ ] Manual left on site for the final.</li>
+</ul>
+<h2 id="9-lights-exhaust-fan-circuit">9. Lights + exhaust fan circuit <a class="anchor" href="#9-lights-exhaust-fan-circuit" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Own 15 A (#14) or 20 A (#12) breaker, or the Xenio light relay per its manual (210.23, 240.4(D)).</li>
+<li>[ ] Xenio relay: 100 W max each, 120 V, needs neutral (Mfr).</li>
+<li>[ ] At least one wall-switched light in the building (210.70).</li>
+<li>[ ] Hot-room light listed, damp-rated, vapor-proof, wall-mounted, flush box (410.6, 410.10(A); Mfr).</li>
+<li>[ ] Light ≥ 6″ below ceiling, not over heater or upper bench, ≥ 12″ from heater; under-bench ideal (Mfr).</li>
+<li>[ ] Bulb ≤ the fixture’s marked max (KIP: 75 W) (Mfr).</li>
+<li>[ ] Fixture supply wire rated as marked on the luminaire; 90 °C min (410.52).</li>
+<li>[ ] <strong>Fan outside the hot room</strong> (inline or exterior wall), listed for location, ducted outdoors (Mfr, 110.3(B)).</li>
+<li>[ ] Switches outside the hot room; exterior switch in a weatherproof cover (Mfr, 404.4(A)).</li>
+<li>[ ] No receptacles inside the sauna room (Mfr).</li>
+<li>[ ] GFCI not required on lights/fan (OR 210.8(F) Exc. 1).</li>
+<li>[ ] AFCI not required — accessory building isn’t a 210.12(B) location; confirm with AHJ.</li>
+</ul>
+<h2 id="10-receptacle">10. Receptacle <a class="anchor" href="#10-receptacle" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] At least one receptacle required at the building (210.52(G)(2)).</li>
+<li>[ ] <strong>Never inside the hot room</strong> (Mfr). Get AHJ OK on an exterior one, in writing.</li>
+<li>[ ] GFCI (OR 210.8(F)); GFCI device readily accessible.</li>
+<li>[ ] Weather-resistant <strong>and</strong> tamper-resistant (406.9(B)(1), 406.12; <strong>2026:</strong> 406.26).</li>
+<li>[ ] Extra-duty in-use cover (406.9(B)(1)).</li>
+<li>[ ] Wet-location box.</li>
+<li>[ ] May share the lights circuit (210.23(A)).</li>
+</ul>
+<h2 id="11-inspections">11. Inspections <a class="anchor" href="#11-inspections" aria-hidden="true">#</a></h2>
+<ul>
+<li>[ ] Permit posted near the main panel (OAR 918-309-0000).</li>
+<li>[ ] Request each inspection <strong>within 24 hours</strong> of work being ready (OAR 918-305-0430(1)).</li>
+<li>[ ] Request via Bend’s CityView portal; note access (house panel, crawlspace) and a phone number.</li>
+<li>[ ] <strong>Cover/rough-in:</strong> house and crawlspace feeder, boxes, subpanel, rods, and sauna wall wiring — <strong>before insulation, foil, or paneling.</strong></li>
+<li>[ ] Don’t cover until the inspection passes (OAR 918-305-0430(5)).</li>
+<li>[ ] Fix corrections and request re-inspection within 20 days (OAR 918-305-0440).</li>
+<li>[ ] <strong>Final:</strong> heater, lights, fan, labels, covers, manual on site. Portal won’t book it until all others pass.</li>
+<li>[ ] Permit void if work doesn’t start, or stops, for 180 days (OAR 918-309-0000).</li>
+</ul>
+<h2 id="sources">Sources <a class="anchor" href="#sources" aria-hidden="true">#</a></h2>
+<ul>
+<li>Oregon 2026 OESC Table 1-E — <a href="https://secure.sos.state.or.us/oard/viewAttachment.action?ruleVrsnRsn=338031">https://secure.sos.state.or.us/oard/viewAttachment.action?ruleVrsnRsn=338031</a></li>
+<li>Oregon 2023 OESC Table 1-E — <a href="https://www.oregon.gov/bcd/codes-stand/Documents/23oesc-table1-E.pdf">https://www.oregon.gov/bcd/codes-stand/Documents/23oesc-table1-E.pdf</a></li>
+<li>ORSC M1902 sauna heaters — <a href="https://up.codes/viewer/oregon/irc-2021/chapter/19/special-appliances-equipment-and-systems">https://up.codes/viewer/oregon/irc-2021/chapter/19/special-appliances-equipment-and-systems</a></li>
+<li>Harvia US manuals: KIP, Virta, Cilindro (HPCS), Xenio CX30/CX45 (via manuals.plus)</li>
+<li>ORS 479.540 / OAR 918-261-0040 owner exemption — <a href="https://oregon.public.law/rules/oar_918-261-0040">https://oregon.public.law/rules/oar_918-261-0040</a></li>
+<li>OAR 918-305-0430 inspections — <a href="https://oregon.public.law/rules/oar_918-305-0430">https://oregon.public.law/rules/oar_918-305-0430</a></li>
+<li>OAR 918-309-0000 permits — <a href="https://oregon.public.law/rules/oar_918-309-0000">https://oregon.public.law/rules/oar_918-309-0000</a></li>
+<li>City of Bend inspection requests — <a href="https://www.bendoregon.gov/services/development-permitting/inspection-requests">https://www.bendoregon.gov/services/development-permitting/inspection-requests</a></li>
+<li>NEC 225.33 disconnects — <a href="https://up.codes/s/maximum-number-of-disconnects">https://up.codes/s/maximum-number-of-disconnects</a></li>
+<li>NEC 300.4 protection (IAEI) — <a href="https://iaeimagazine.org/electrical-safety/nec-300-4-protection-against-physical-damage-why-this-overlooked-rule-still-matters-after-30-years/">https://iaeimagazine.org/electrical-safety/nec-300-4-protection-against-physical-damage-why-this-overlooked-rule-still-matters-after-30-years/</a></li>
+</ul>
+</article>
+  <footer class="doc-footer">
+    Suana build docs · source: <code>docs/src/02-planning/electrical-code-checklist.md</code>
+  </footer>
+</main>
+</div>
+</body>
+</html>
